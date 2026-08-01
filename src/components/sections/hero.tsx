@@ -37,14 +37,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-28 text-center sm:px-6 lg:px-8">
         <FadeIn direction="up" delay={0}>
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/90 backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-            {t("hero.badge")}
-          </span>
-        </FadeIn>
-
-        <FadeIn direction="up" delay={0.1}>
-          <h1 className="mt-6 break-words text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="break-words text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
             {t("hero.title")}
           </h1>
         </FadeIn>
