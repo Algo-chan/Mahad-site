@@ -40,7 +40,8 @@ export function Navbar() {
   }, []);
 
   const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
-  const [nameLine1, nameLine2] = String(t("schoolName")).split(" ");
+  const name = String(t("schoolName"));
+  const [nameLine1, nameLine2] = name.split(" ");
 
   return (
     <header
@@ -65,13 +66,15 @@ export function Navbar() {
           </span>
           <span
             className={cn(
-              "flex h-10 flex-col justify-between text-sm font-bold leading-tight tracking-tight md:hidden",
+              "flex h-10 w-[5.5rem] flex-col justify-between text-sm font-bold leading-tight tracking-tight md:hidden",
               isScrolled ? "text-primary dark:text-primary" : "text-white"
             )}
             aria-hidden="true"
           >
-            <span>{nameLine1}</span>
-            {nameLine2 ? <span>{nameLine2}</span> : null}
+            <span className="whitespace-nowrap">{nameLine1}</span>
+            {nameLine2 ? (
+              <span className="whitespace-nowrap">{nameLine2}</span>
+            ) : null}
           </span>
           <span
             className={cn(
@@ -123,7 +126,7 @@ export function Navbar() {
           <button
             type="button"
             className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300",
+              "hidden h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 sm:flex",
               isScrolled
                 ? "text-neutral-900 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-800"
                 : "text-white hover:bg-white/10"

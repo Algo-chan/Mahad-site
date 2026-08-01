@@ -36,7 +36,7 @@ export function LanguageSwitcher({
             onClick={() => setLocale(code)}
             aria-pressed={active}
             className={cn(
-              "rounded-full px-3 py-1 text-xs font-bold transition-colors duration-300",
+              "rounded-full px-2 py-1 text-xs font-bold transition-colors duration-300 sm:px-3",
               active
                 ? isScrolled
                   ? "bg-primary text-white"
