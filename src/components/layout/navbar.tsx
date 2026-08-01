@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { GraduationCap, Menu, Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SearchModal } from "@/components/layout/SearchModal";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
@@ -53,15 +53,14 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between gap-4 md:h-18">
         <Link href="/" className="flex min-w-0 items-center gap-2">
-          <span
-            className={cn(
-              "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors duration-300",
-              isScrolled
-                ? "bg-primary text-primary-foreground"
-                : "bg-white text-primary"
-            )}
-          >
-            <GraduationCap className="h-5 w-5" aria-hidden="true" />
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center">
+            <img
+              src="/logo.png"
+              alt={t("schoolName")}
+              width={40}
+              height={40}
+              className="h-full w-full rounded-xl object-contain"
+            />
           </span>
           <span
             className={cn(
