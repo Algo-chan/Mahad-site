@@ -52,10 +52,10 @@ export function Navbar() {
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4 md:h-18">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex min-w-0 items-center gap-2">
           <span
             className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-xl transition-colors duration-300",
+              "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors duration-300",
               isScrolled
                 ? "bg-primary text-primary-foreground"
                 : "bg-white text-primary"
@@ -65,7 +65,7 @@ export function Navbar() {
           </span>
           <span
             className={cn(
-              "whitespace-nowrap text-lg font-bold tracking-tight transition-colors duration-300 md:text-xl",
+              "truncate text-lg font-bold tracking-tight transition-colors duration-300 md:text-xl",
               isScrolled ? "text-primary dark:text-primary" : "text-white"
             )}
           >
