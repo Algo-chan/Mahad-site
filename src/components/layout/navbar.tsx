@@ -40,6 +40,7 @@ export function Navbar() {
   }, []);
 
   const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+  const [nameLine1, nameLine2] = String(t("schoolName")).split(" ");
 
   return (
     <header
@@ -51,7 +52,7 @@ export function Navbar() {
           : "border-b border-white/10 bg-transparent"
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4 md:h-18">
+      <Container className="flex h-16 items-center justify-between gap-2 md:h-18 md:gap-4">
         <Link href="/" className="flex min-w-0 items-center gap-2">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center">
             <img
@@ -64,11 +65,21 @@ export function Navbar() {
           </span>
           <span
             className={cn(
-              "truncate text-lg font-bold tracking-tight transition-colors duration-300 md:text-xl",
+              "flex h-10 flex-col justify-between text-sm font-bold leading-tight tracking-tight md:hidden",
+              isScrolled ? "text-primary dark:text-primary" : "text-white"
+            )}
+            aria-hidden="true"
+          >
+            <span>{nameLine1}</span>
+            {nameLine2 ? <span>{nameLine2}</span> : null}
+          </span>
+          <span
+            className={cn(
+              "hidden whitespace-nowrap text-lg font-bold tracking-tight md:block md:text-xl",
               isScrolled ? "text-primary dark:text-primary" : "text-white"
             )}
           >
-            {t("schoolName")}
+            {name}
           </span>
         </Link>
 
