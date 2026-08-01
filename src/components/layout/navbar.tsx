@@ -53,8 +53,8 @@ export function Navbar() {
           : "border-b border-white/10 bg-transparent"
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-2 md:h-18 md:gap-4">
-        <Link href="/" className="flex min-w-0 items-center gap-2">
+      <Container className="flex h-16 items-center justify-between gap-2 md:h-18 md:gap-6">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center">
             <img
               src="/logo.png"
