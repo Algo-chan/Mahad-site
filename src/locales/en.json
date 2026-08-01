@@ -65,6 +65,502 @@
       ]
     }
   },
+  "academics": {
+    "pageTitle": "Academic Programs",
+    "heroSubtitle": "Building strong foundations for lifelong learning.",
+    "overview": {
+      "title": "Our Academic Journey",
+      "subtitle": "From early childhood through adolescence, we guide every student toward excellence.",
+      "text": "MAHAD Al-TOWHEED offers a comprehensive academic curriculum spanning from Kindergarten through Grade 10. Our programs are designed to develop critical thinking, creativity, and a love for learning in every child."
+    },
+    "levels": {
+      "title": "Programs by Level",
+      "subtitle": "Three stages of growth, one mission of excellence.",
+      "kindergarten": {
+        "title": "Kindergarten",
+        "grades": "KG1 & KG2",
+        "age": "Ages 4-6",
+        "description": "Our kindergarten program focuses on early literacy, numeracy, social skills, and creative exploration through play-based learning. We create a nurturing environment where young minds develop confidence and curiosity.",
+        "features": ["Phonics & Early Reading", "Basic Mathematics", "Art & Music", "Social Development", "Islamic Manners"]
+      },
+      "primary": {
+        "title": "Primary Education",
+        "grades": "Grades 1-6",
+        "age": "Ages 7-12",
+        "description": "The primary program builds strong foundational skills in core subjects while fostering critical thinking and problem-solving abilities. Students engage in interactive learning, group projects, and hands-on activities.",
+        "features": ["Mathematics & Science", "English & Arabic Language", "Social Studies", "Computer Literacy", "Physical Education"]
+      },
+      "intermediate": {
+        "title": "Intermediate Education",
+        "grades": "Grades 7-10",
+        "age": "Ages 13-16",
+        "description": "Our intermediate program prepares students for higher education with advanced coursework, independent research skills, and leadership development. Students receive personalized academic counseling and career guidance.",
+        "features": ["Advanced Mathematics", "Physics & Chemistry", "Biology & Environmental Science", "Literature & Composition", "Leadership & Life Skills"]
+      }
+    },
+    "methodology": {
+      "title": "Teaching Methodology",
+      "subtitle": "How we teach is as important as what we teach.",
+      "items": [
+        { "title": "Student-Centered Learning", "desc": "Lessons are designed around the needs, interests, and abilities of each student." },
+        { "title": "Interactive Classrooms", "desc": "Smart boards, group discussions, and hands-on experiments make learning engaging." },
+        { "title": "Continuous Assessment", "desc": "Regular evaluations help us track progress and adapt teaching strategies." },
+        { "title": "Character Integration", "desc": "Academic lessons are woven with moral and ethical teachings." }
+      ]
+    },
+    "subjects": {
+      "title": "Subjects Taught",
+      "subtitle": "A balanced curriculum for holistic development.",
+      "list": ["Mathematics", "English Language", "Arabic Language", "Science (Physics, Chemistry, Biology)", "Social Studies", "Computer Science", "Physical Education", "Arts & Crafts", "Islamic Studies"]
+    },
+    "development": {
+      "title": "Student Development",
+      "subtitle": "Beyond the classroom, we shape character and confidence.",
+      "items": [
+        { "title": "Leadership Programs", "desc": "Student councils, class representatives, and peer mentoring." },
+        { "title": "Public Speaking", "desc": "Regular debates, presentations, and recitation competitions." },
+        { "title": "Community Service", "desc": "Students participate in local outreach and charity work." },
+        { "title": "Sports & Athletics", "desc": "Football, basketball, and athletics for physical fitness." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Enroll?",
+      "subtitle": "Join MAHAD Al-TOWHEED and give your child the gift of quality education.",
+      "button": "Apply for Admission"
+    }
+  },
+  "religious": {
+    "pageTitle": "Religious Education",
+    "heroSubtitle": "Nurturing faith, character, and spiritual growth.",
+    "overview": {
+      "title": "Our Religious Program",
+      "subtitle": "Comprehensive Islamic education from the first steps of faith to advanced scholarship.",
+      "text": "MAHAD Al-TOWHEED offers a dedicated religious education program spanning Grade 1 through Grade 12. Our curriculum is designed to instill deep understanding of Islamic principles, Quranic studies, and moral values that guide students throughout their lives."
+    },
+    "levels": {
+      "title": "Program Structure",
+      "subtitle": "A progressive journey of faith and knowledge.",
+      "elementary": {
+        "title": "Elementary Religious",
+        "grades": "Grades 1-6",
+        "description": "Foundational Islamic education focusing on Quran memorization (Hifz), basic Fiqh, Islamic manners (Adab), and stories of the Prophets. Children learn through interactive lessons, songs, and visual aids.",
+        "features": ["Quran Memorization (Juz Amma)", "Islamic Manners & Ethics", "Stories of the Prophets", "Basic Fiqh & Worship", "Arabic Language for Quran"]
+      },
+      "middle": {
+        "title": "Middle School Religious",
+        "grades": "Grades 7-9",
+        "description": "Intermediate studies in Tafsir, Hadith, Islamic History, and advanced Fiqh. Students begin analytical thinking about Islamic texts and their application in modern life.",
+        "features": ["Quranic Tafsir", "Hadith Studies", "Islamic History", "Comparative Fiqh", "Aqeedah & Creed"]
+      },
+      "advanced": {
+        "title": "Advanced Religious",
+        "grades": "Grades 10-12",
+        "description": "Advanced scholarship preparation including Usul al-Fiqh, advanced Tafsir, Islamic jurisprudence, and Dawah training. Graduates are prepared for higher Islamic studies or community leadership roles.",
+        "features": ["Usul al-Fiqh", "Advanced Tafsir", "Islamic Jurisprudence", "Dawah & Leadership", "Research Methodology"]
+      }
+    },
+    "curriculum": {
+      "title": "Curriculum Pillars",
+      "subtitle": "The four foundations of our religious program.",
+      "items": [
+        { "title": "Quranic Studies", "desc": "Tilawah, Hifz, Tafsir, and Tajweed from beginner to advanced levels." },
+        { "title": "Hadith & Sunnah", "desc": "Study of authentic narrations, their meanings, and practical applications." },
+        { "title": "Fiqh & Worship", "desc": "Understanding Islamic jurisprudence related to prayer, fasting, zakat, and daily life." },
+        { "title": "Aqeedah & Character", "desc": "Correct Islamic creed combined with moral and ethical development." }
+      ]
+    },
+    "objectives": {
+      "title": "Learning Objectives",
+      "subtitle": "What our students achieve.",
+      "list": ["Memorize the entire Juz Amma by Grade 6", "Understand the meaning of daily prayers and supplications", "Apply Islamic ethics in personal and social life", "Develop critical thinking about modern challenges from an Islamic perspective", "Prepare for advanced Islamic scholarship or community service"]
+    },
+    "outcomes": {
+      "title": "Learning Outcomes",
+      "subtitle": "Measurable results that reflect true understanding.",
+      "items": [
+        { "title": "Quranic Fluency", "desc": "Students can read, understand, and reflect on Quranic verses independently." },
+        { "title": "Prayer Proficiency", "desc": "Complete understanding of Salah, Wudu, and related rulings." },
+        { "title": "Moral Character", "desc": "Demonstrated honesty, respect, compassion, and responsibility." },
+        { "title": "Community Leadership", "desc": "Ability to lead prayers, teach younger students, and serve the community." }
+      ]
+    },
+    "character": {
+      "title": "Character Development",
+      "subtitle": "Building the Muslim personality.",
+      "text": "Beyond academic knowledge, our religious program focuses on Tazkiyah (spiritual purification) and Tarbiah (holistic upbringing). Students participate in daily Dhikr, weekly mentoring sessions, and monthly community service projects that transform knowledge into action.",
+      "quote": "Knowledge without action is like a tree without fruit.",
+      "attribution": "Islamic Proverb"
+    },
+    "cta": {
+      "title": "Invest in Spiritual Education",
+      "subtitle": "Support our religious program and help raise the next generation of knowledgeable Muslims.",
+      "button": "Support Religious Education"
+    }
+  },
+  "admissions": {
+    "pageTitle": "Admissions",
+    "heroSubtitle": "Join MAHAD Al-TOWHEED and begin your journey of excellence.",
+    "requirements": {
+      "title": "Admission Requirements",
+      "subtitle": "Who can apply to our programs.",
+      "academic": {
+        "title": "Academic Program",
+        "items": [
+          "Completed application form",
+          "Birth certificate or valid ID",
+          "Previous school transcripts (if applicable)",
+          "Passport-size photographs (2 copies)",
+          "Medical clearance certificate",
+          "Parent/guardian identification",
+          "Interview with the admissions committee"
+        ]
+      },
+      "religious": {
+        "title": "Religious Program",
+        "items": [
+          "Completed application form",
+          "Birth certificate or valid ID",
+          "Basic Quran reading ability (for intermediate levels)",
+          "Recommendation letter from local mosque or Islamic center",
+          "Parent/guardian commitment to support religious education",
+          "Interview with the religious studies coordinator"
+        ]
+      }
+    },
+    "process": {
+      "title": "Application Process",
+      "subtitle": "Simple steps to enroll your child.",
+      "steps": [
+        { "number": "01", "title": "Submit Application", "desc": "Fill out the online or in-person application form and attach all required documents." },
+        { "number": "02", "title": "Document Review", "desc": "Our admissions team reviews your application and verifies all submitted materials." },
+        { "number": "03", "title": "Entrance Assessment", "desc": "Students take a brief placement test to determine the appropriate grade level." },
+        { "number": "04", "title": "Family Interview", "desc": "A friendly meeting with parents and the student to understand goals and expectations." },
+        { "number": "05", "title": "Acceptance & Enrollment", "desc": "Receive your acceptance letter and complete enrollment by paying the registration fee." }
+      ]
+    },
+    "documents": {
+      "title": "Required Documents",
+      "subtitle": "Please prepare the following before applying.",
+      "checklist": [
+        "Completed application form (available at the school office)",
+        "Certified copy of birth certificate",
+        "Previous school report cards / transcripts",
+        "Two recent passport-size photographs",
+        "Medical clearance from a registered clinic",
+        "Copy of parent/guardian ID",
+        "Emergency contact information",
+        "Signed parent commitment form"
+      ],
+      "note": "All documents must be submitted in person at the school administration office during working hours (Monday–Friday, 8:00 AM – 4:00 PM)."
+    },
+    "calendar": {
+      "title": "School Calendar",
+      "subtitle": "Important dates for the 2026–2027 academic year.",
+      "events": [
+        { "date": "September 1, 2026", "title": "First Day of School", "type": "academic" },
+        { "date": "October 15–20, 2026", "title": "Mid-Term Examinations", "type": "academic" },
+        { "date": "November 30, 2026", "title": "Parent-Teacher Meeting", "type": "event" },
+        { "date": "December 20, 2026 – Jan 5, 2027", "title": "Winter Break", "type": "holiday" },
+        { "date": "March 10–15, 2027", "title": "Final Examinations", "type": "academic" },
+        { "date": "June 15, 2027", "title": "Graduation Ceremony", "type": "event" },
+        { "date": "June 20, 2027", "title": "Last Day of School", "type": "academic" }
+      ],
+      "legend": {
+        "academic": "Academic",
+        "event": "Event",
+        "holiday": "Holiday"
+      }
+    },
+    "tuition": {
+      "title": "Tuition & Fees",
+      "subtitle": "Transparent and affordable education for every family.",
+      "note": "MAHAD Al-TOWHEED is a non-profit institution. Tuition fees are kept minimal to ensure accessibility. Scholarships and financial aid are available for families in need.",
+      "table": {
+        "headers": ["Program", "Registration Fee", "Monthly Tuition", "Annual Total"],
+        "rows": [
+          { "program": "Kindergarten (KG1–KG2)", "registration": "500 ETB", "monthly": "300 ETB", "annual": "3,500 ETB" },
+          { "program": "Primary (Grades 1–6)", "registration": "600 ETB", "monthly": "400 ETB", "annual": "5,000 ETB" },
+          { "program": "Intermediate (Grades 7–10)", "registration": "700 ETB", "monthly": "500 ETB", "annual": "6,500 ETB" },
+          { "program": "Religious Education (All Grades)", "registration": "300 ETB", "monthly": "200 ETB", "annual": "2,500 ETB" }
+        ]
+      },
+      "aid": {
+        "title": "Financial Aid & Scholarships",
+        "text": "We believe no child should be denied education due to financial hardship. Full and partial scholarships are available based on family income, academic merit, and community service. Contact our admissions office for a confidential assessment."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before applying.",
+      "items": [
+        { "question": "What is the minimum age for kindergarten?", "answer": "Children must be at least 4 years old by September 1st to enroll in KG1." },
+        { "question": "Can my child enroll in both academic and religious programs?", "answer": "Yes. Many of our students are enrolled in both programs. The schedules are designed to accommodate dual enrollment." },
+        { "question": "Do you accept students mid-year?", "answer": "Yes, we accept transfers during the first semester (September–November) subject to seat availability and assessment." },
+        { "question": "Is there a uniform requirement?", "answer": "Yes. All students wear the school uniform, which is available for purchase at the school office at subsidized prices." },
+        { "question": "What languages are used for instruction?", "answer": "Academic subjects are taught in English. Religious studies are taught in Arabic with Amharic explanations where needed." },
+        { "question": "How can I apply for financial aid?", "answer": "Indicate your interest on the application form. Our social worker will contact you to schedule a confidential family interview." },
+        { "question": "Are meals provided at school?", "answer": "We provide a daily nutritious lunch at a subsidized cost. Students may also bring food from home." },
+        { "question": "What is the student-to-teacher ratio?", "answer": "We maintain a ratio of 25 students per teacher to ensure personalized attention." }
+      ]
+    },
+    "cta": {
+      "title": "Begin Your Application Today",
+      "subtitle": "Spaces are limited. Secure your child's future by applying now.",
+      "button": "Download Application Form",
+      "contact": "Or call us at +251 91 234 5678"
+    }
+  },
+  "gallery": {
+    "pageTitle": "Gallery",
+    "heroSubtitle": "Moments that tell our story.",
+    "noResults": "No images found",
+    "filter": {
+      "all": "All",
+      "campus": "Campus",
+      "students": "Students",
+      "teachers": "Teachers",
+      "classrooms": "Classrooms",
+      "labs": "Laboratories",
+      "events": "Events",
+      "religious": "Religious",
+      "graduation": "Graduation",
+      "community": "Community"
+    },
+    "lightbox": {
+      "close": "Close",
+      "next": "Next",
+      "previous": "Previous",
+      "of": "of"
+    }
+  },
+  "news": {
+    "pageTitle": "News & Events",
+    "heroSubtitle": "Stay connected with the latest from MAHAD Al-TOWHEED.",
+    "tabs": {
+      "all": "All",
+      "announcements": "Announcements",
+      "events": "Events",
+      "achievements": "Achievements",
+      "charity": "Charity"
+    },
+    "featured": {
+      "badge": "Featured",
+      "readMore": "Read More"
+    },
+    "categories": {
+      "announcement": "Announcement",
+      "event": "Event",
+      "achievement": "Achievement",
+      "charity": "Charity"
+    },
+    "meta": {
+      "date": "Date",
+      "category": "Category",
+      "readTime": "min read"
+    },
+    "articles": [
+      {
+        "id": 1,
+        "title": "New Science Laboratory Opens",
+        "excerpt": "Thanks to our generous donors, students now have access to modern science equipment including microscopes, chemical reagents, and safety gear.",
+        "category": "announcement",
+        "date": "July 15, 2026",
+        "readTime": 3,
+        "featured": true
+      },
+      {
+        "id": 2,
+        "title": "Annual Charity Run Raises $5,000",
+        "excerpt": "The local community came together to support our scholarship fund in a record-breaking event with over 200 participants.",
+        "category": "charity",
+        "date": "June 28, 2026",
+        "readTime": 4,
+        "featured": false
+      },
+      {
+        "id": 3,
+        "title": "Religious Education Program Expands",
+        "excerpt": "We are now offering advanced religious studies through Grade 12 with certified instructors and a new Tafsir curriculum.",
+        "category": "announcement",
+        "date": "June 10, 2026",
+        "readTime": 3,
+        "featured": false
+      },
+      {
+        "id": 4,
+        "title": "Student Wins Regional Mathematics Competition",
+        "excerpt": "Grade 8 student Ahmed Ibrahim placed first among 50 schools in the regional mathematics olympiad.",
+        "category": "achievement",
+        "date": "May 22, 2026",
+        "readTime": 2,
+        "featured": false
+      },
+      {
+        "id": 5,
+        "title": "Community Iftar Gathering",
+        "excerpt": "Over 300 families joined us for a blessed evening of breaking fast together during Ramadan.",
+        "category": "event",
+        "date": "April 5, 2026",
+        "readTime": 3,
+        "featured": false
+      },
+      {
+        "id": 6,
+        "title": "New Partnership with Global Education Fund",
+        "excerpt": "MAHAD Al-TOWHEED signs a 3-year partnership to provide scholarships for 100 students annually.",
+        "category": "announcement",
+        "date": "March 18, 2026",
+        "readTime": 4,
+        "featured": false
+      },
+      {
+        "id": 7,
+        "title": "Graduation Ceremony 2026",
+        "excerpt": "Celebrating our 45 graduates who are now ready to pursue higher education and serve their communities.",
+        "category": "event",
+        "date": "February 20, 2026",
+        "readTime": 5,
+        "featured": false
+      },
+      {
+        "id": 8,
+        "title": "Food Distribution Program Reaches 500 Families",
+        "excerpt": "Our quarterly food basket program continues to support vulnerable families in the surrounding neighborhoods.",
+        "category": "charity",
+        "date": "January 30, 2026",
+        "readTime": 3,
+        "featured": false
+      }
+    ],
+    "noResults": "No articles found in this category."
+  },
+  "impact": {
+    "pageTitle": "Our Impact",
+    "heroSubtitle": "Measurable change. Countless lives transformed.",
+    "stats": {
+      "title": "By The Numbers",
+      "subtitle": "The impact of your support in real-time.",
+      "items": [
+        { "value": 500, "suffix": "+", "label": "Students Enrolled", "description": "From kindergarten through grade 10" },
+        { "value": 250, "suffix": "+", "label": "Graduates", "description": "Equipped for higher education and leadership" },
+        { "value": 45, "suffix": "", "label": "Dedicated Teachers", "description": "Passionate educators shaping futures" },
+        { "value": 120, "suffix": "+", "label": "Active Volunteers", "description": "Community members giving their time" },
+        { "value": 35, "suffix": "+", "label": "Charity Projects", "description": "Food, water, and education initiatives" },
+        { "value": 15, "suffix": "", "label": "Years of Service", "description": "Consistent commitment since 2010" }
+      ]
+    },
+    "stories": {
+      "title": "Success Stories",
+      "subtitle": "Real students. Real transformations.",
+      "items": [
+        {
+          "name": "Fatima A.",
+          "role": "Grade 10 Student",
+          "quote": "I joined MAHAD Al-TOWHEED in Grade 1. Today, I am the top student in my class and dream of becoming a doctor to serve my community.",
+          "background": "Joined as a shy 6-year-old from a low-income family. Now leads the student council and tutors younger children in mathematics."
+        },
+        {
+          "name": "Omar H.",
+          "role": "Religious Program Graduate",
+          "quote": "The religious education here gave me more than knowledge—it gave me purpose. I now teach Quran to children in my neighborhood every weekend.",
+          "background": "Completed Hifz of Juz Amma by Grade 6. Currently memorizing the entire Quran while mentoring 15 younger students."
+        },
+        {
+          "name": "Sister Amina",
+          "role": "Parent",
+          "quote": "Before this school, my children had no access to quality education. Now they speak English confidently, excel in science, and pray on time without reminder.",
+          "background": "Mother of three students enrolled in both academic and religious programs. Her eldest daughter received a full scholarship."
+        }
+      ]
+    },
+    "programs": {
+      "title": "Community Programs",
+      "subtitle": "Extending our mission beyond the classroom.",
+      "items": [
+        { "title": "Daily Meal Program", "desc": "Nutritious lunch served to every student, ensuring no child learns on an empty stomach.", "stat": "75,000+", "statLabel": "meals served annually" },
+        { "title": "Scholarship Fund", "desc": "Full and partial scholarships for students from families facing financial hardship.", "stat": "120", "statLabel": "scholarships active" },
+        { "title": "Clean Water Initiative", "desc": "Installation of water filtration systems in the school and surrounding community.", "stat": "5", "statLabel": "water points installed" },
+        { "title": "Adult Literacy Classes", "desc": "Evening classes for parents and community members to learn reading, writing, and basic math.", "stat": "80", "statLabel": "adults enrolled" }
+      ]
+    },
+    "testimonials": {
+      "title": "What Partners Say",
+      "subtitle": "Voices from those who support our mission.",
+      "items": [
+        { "name": "Global Relief Foundation", "role": "International NGO Partner", "quote": "We have funded schools across three continents. The transparency and impact reporting from MAHAD Al-TOWHEED are the best we have seen." },
+        { "name": "Sheikh Abdullah", "role": "Local Mosque Imam", "quote": "This institution is not just a school—it is the heart of our community's spiritual and intellectual revival." },
+        { "name": "Dr. Sarah Mitchell", "role": "Education Consultant, UK", "quote": "The dual curriculum model here should be replicated globally. Academic rigor with moral grounding produces exceptional citizens." }
+      ]
+    },
+    "cta": {
+      "title": "Be Part of the Change",
+      "subtitle": "Your support creates ripples that last generations.",
+      "button": "Donate Now"
+    }
+  },
+  "donate": {
+    "pageTitle": "Donate",
+    "heroSubtitle": "Your generosity builds futures. Every contribution creates a ripple of hope.",
+    "why": {
+      "title": "Why Your Support Matters",
+      "subtitle": "In a community where many families struggle to afford basic necessities, your donation is not charity—it is an investment in human potential.",
+      "cards": [
+        { "title": "Education Changes Everything", "desc": "A child who completes primary school is 50% less likely to live in poverty as an adult. Your donation breaks the cycle.", "icon": "GraduationCap" },
+        { "title": "No Child Left Behind", "desc": "We turn away no student due to poverty. Your support funds scholarships, meals, and uniforms for children who would otherwise be excluded.", "icon": "Heart" },
+        { "title": "Community Transformation", "desc": "Educated children become leaders who uplift their families, neighborhoods, and nation. Your impact multiplies across generations.", "icon": "Users" }
+      ]
+    },
+    "usage": {
+      "title": "How Every Dollar Is Used",
+      "subtitle": "We are committed to radical transparency. Here is exactly where your money goes.",
+      "items": [
+        { "percent": "45%", "title": "Direct Education", "desc": "Teacher salaries, classroom supplies, books, and learning materials." },
+        { "percent": "25%", "title": "Student Welfare", "desc": "Daily meals, uniforms, medical care, and transportation support." },
+        { "percent": "15%", "title": "Facility & Operations", "desc": "Building maintenance, utilities, labs, and library resources." },
+        { "percent": "10%", "title": "Scholarships", "desc": "Full and partial financial aid for families in crisis." },
+        { "percent": "5%", "title": "Administration", "desc": "Essential staffing to ensure accountability and compliance." }
+      ],
+      "note": "Our annual financial reports are publicly available. We operate with the same transparency standards required of international NGOs."
+    },
+    "projects": {
+      "title": "Current Projects",
+      "subtitle": "Specific initiatives where your support is needed right now.",
+      "goalLabel": "Goal",
+      "support": "Support This Project",
+      "items": [
+        { "title": "Science Laboratory Expansion", "goal": "$15,000", "raised": "$9,200", "percent": 61, "desc": "Equip our secondary students with modern physics, chemistry, and biology lab equipment." },
+        { "title": "Library & Digital Resource Center", "goal": "$8,000", "raised": "$3,500", "percent": 44, "desc": "Build a proper library with 5,000 books and 20 computers for research and digital literacy." },
+        { "title": "Girls' Dormitory Construction", "goal": "$25,000", "raised": "$12,000", "percent": 48, "desc": "Safe housing for 40 female students from rural areas who currently walk 10+ kilometers daily." },
+        { "title": "Teacher Training Program", "goal": "$5,000", "raised": "$4,100", "percent": 82, "desc": "Send 10 teachers to certified professional development workshops annually." }
+      ]
+    },
+    "methods": {
+      "title": "Ways to Give",
+      "subtitle": "Choose the method that works best for you.",
+      "options": [
+        { "title": "One-Time Donation", "desc": "Make an immediate impact with a single gift of any amount.", "cta": "Donate Now" },
+        { "title": "Monthly Sponsorship", "desc": "Sponsor a student's full education for just $30 per month. Receive updates and progress reports.", "cta": "Become a Sponsor" },
+        { "title": "Corporate Partnership", "desc": "Partner with us as an organization. We offer branding recognition and detailed impact reports.", "cta": "Partner With Us" },
+        { "title": "In-Kind Donation", "desc": "Donate books, computers, lab equipment, or school supplies. We handle shipping logistics.", "cta": "Send Supplies" }
+      ],
+      "contact": "For bank transfers, wire instructions, or telebirr payments, please contact our finance office at finance@mahadaltowheed.org or +251 91 234 5678."
+    },
+    "transparency": {
+      "title": "Financial Accountability",
+      "subtitle": "We treat donor funds with the sacred trust they deserve.",
+      "items": [
+        { "title": "Annual Audits", "desc": "Independent financial audits conducted by certified accountants every year." },
+        { "title": "Public Reports", "desc": "Full financial statements and impact reports published on our website annually." },
+        { "title": "Zero Hidden Fees", "desc": "100% of online donations reach the school. Payment processing fees are absorbed by our board." },
+        { "title": "Donor Updates", "desc": "Quarterly email updates showing exactly how your donation was used and who benefited." }
+      ]
+    },
+    "cta": {
+      "title": "Give Today. Change Forever.",
+      "subtitle": "A $30 donation educates a child for one month. A $300 donation educates a child for a full year.",
+      "button": "Make a Donation"
+    }
+  },
   "home": {
     "intro": {
       "title": "Welcome to MAHAD Al-TOWHEED",

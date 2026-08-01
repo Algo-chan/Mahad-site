@@ -12,10 +12,10 @@ export function Philosophy() {
   return (
     <section className="bg-white py-16 md:py-24 dark:bg-neutral-950">
       <Container>
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl px-4 text-center">
           <FadeIn>
             <Lightbulb
-              className="mx-auto mb-6 h-8 w-8 text-accent"
+              className="mx-auto mb-6 h-10 w-10 text-accent"
               aria-hidden="true"
             />
           </FadeIn>

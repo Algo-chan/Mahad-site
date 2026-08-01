@@ -19,26 +19,26 @@ export function HistoryFounder() {
               title={t("about.history.title")}
             />
             <StaggerContainer className="mt-6 flex flex-col gap-4">
-              <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+              <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-300 md:text-lg">
                 {t("about.history.p1")}
               </p>
-              <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+              <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-300 md:text-lg">
                 {t("about.history.p2")}
               </p>
             </StaggerContainer>
           </div>
 
-          <FadeIn direction="left" className="order-first md:order-2">
-            <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8 text-center dark:border-neutral-800 dark:bg-neutral-900">
+          <FadeIn direction="up" className="order-first md:order-2">
+            <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8 text-center shadow-sm dark:border-neutral-800 dark:bg-neutral-900 md:p-10">
               <div
-                className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-secondary/20 text-2xl font-bold text-secondary"
+                className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-secondary/20 text-3xl font-bold text-secondary md:h-28 md:w-28"
                 role="img"
                 aria-label="Founder portrait placeholder"
               >
                 F
               </div>
               <span
-                className="block font-serif text-6xl leading-none text-primary"
+                className="block font-serif text-6xl leading-none text-primary opacity-30"
                 aria-hidden="true"
               >
                 &ldquo;

@@ -19,9 +19,7 @@ export function VisionMissionValues() {
   return (
     <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 md:py-24 dark:from-primary/10">
       <Container>
-        <SectionHeader title={t("about.values.title")} />
-
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
           <FadeIn className="h-full">
             <article className="h-full rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
               <Eye className="mb-4 h-10 w-10 text-primary" aria-hidden="true" />
@@ -47,7 +45,15 @@ export function VisionMissionValues() {
           </FadeIn>
         </div>
 
-        <StaggerContainer className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <SectionHeader
+          title={t("about.values.title")}
+          className="mt-16"
+        />
+
+        <StaggerContainer
+          staggerDelay={0.1}
+          className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        >
           {values.map((value) => (
             <article
               key={value.title}

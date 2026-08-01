@@ -10,11 +10,7 @@ export function PageHero() {
   return (
     <section className="relative overflow-hidden bg-primary py-20 md:py-28">
       <div
-        className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-[0.08]"
         style={{
           backgroundImage:
             "radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)",
@@ -23,17 +19,19 @@ export function PageHero() {
         aria-hidden="true"
       />
 
-      <Container className="relative z-10 text-center">
-        <FadeIn>
-          <h1 className="text-3xl font-bold text-white md:text-5xl">
-            {t("about.pageTitle")}
-          </h1>
-        </FadeIn>
-        <FadeIn delay={0.2}>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-            {t("about.heroSubtitle")}
-          </p>
-        </FadeIn>
+      <Container className="relative z-10">
+        <div className="mx-auto max-w-4xl text-center">
+          <FadeIn direction="up">
+            <h1 className="text-3xl font-bold text-white md:text-5xl">
+              {t("about.pageTitle")}
+            </h1>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.2}>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80 md:text-xl">
+              {t("about.heroSubtitle")}
+            </p>
+          </FadeIn>
+        </div>
       </Container>
     </section>
   );

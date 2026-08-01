@@ -1,0 +1,14 @@
+[
+  { "id": 1, "category": "campus", "title": "School Campus", "placeholder": "Campus Main Building" },
+  { "id": 2, "category": "students", "title": "Students Learning", "placeholder": "Students in Class" },
+  { "id": 3, "category": "teachers", "title": "Teacher Teaching", "placeholder": "Teacher at Whiteboard" },
+  { "id": 4, "category": "classrooms", "title": "Modern Classroom", "placeholder": "Classroom Interior" },
+  { "id": 5, "category": "labs", "title": "Science Lab", "placeholder": "Science Laboratory" },
+  { "id": 6, "category": "events", "title": "Sports Day", "placeholder": "Annual Sports Event" },
+  { "id": 7, "category": "religious", "title": "Quran Class", "placeholder": "Religious Education" },
+  { "id": 8, "category": "graduation", "title": "Graduation 2025", "placeholder": "Graduation Ceremony" },
+  { "id": 9, "category": "community", "title": "Charity Drive", "placeholder": "Community Service" },
+  { "id": 10, "category": "students", "title": "Art Exhibition", "placeholder": "Student Artwork" },
+  { "id": 11, "category": "campus", "title": "School Library", "placeholder": "Library Interior" },
+  { "id": 12, "category": "events", "title": "Annual Day", "placeholder": "School Annual Day" }
+]
