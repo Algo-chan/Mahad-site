@@ -2,6 +2,7 @@
 
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function CtaBanner() {
@@ -22,12 +23,9 @@ export function CtaBanner() {
             </p>
           </FadeIn>
           <FadeIn direction="up" delay={0.3}>
-            <a
-              href="#"
-              className="mt-8 inline-block w-full rounded-full bg-accent px-10 py-4 text-lg font-bold text-white transition hover:scale-105 hover:bg-accent-dark sm:w-auto"
-            >
+            <Button href="/contact" size="lg" className="mt-8 w-full sm:w-auto">
               {t("admissions.cta.button")}
-            </a>
+            </Button>
           </FadeIn>
           <FadeIn direction="up" delay={0.4}>
             <p className="mt-4 text-sm text-white/70">

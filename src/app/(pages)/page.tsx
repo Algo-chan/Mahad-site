@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Introduction />
       <QuickStats />
+      <Introduction />
       <MissionCards />
       <Achievements />
       <Testimonials />

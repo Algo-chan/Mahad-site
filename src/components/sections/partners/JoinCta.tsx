@@ -3,6 +3,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function JoinCta() {
@@ -42,12 +43,14 @@ export function JoinCta() {
               </ul>
 
               <div className="mt-6 flex justify-center sm:justify-start">
-                <a
+                <Button
                   href={`mailto:${email}`}
-                  className="inline-block w-full rounded-full bg-white px-8 py-3 text-center font-bold text-secondary-dark transition hover:scale-105 sm:w-auto"
+                  variant="white"
+                  size="md"
+                  className="w-full sm:w-auto"
                 >
                   {t("partners.join.cta")}
-                </a>
+                </Button>
               </div>
 
               <p className="mt-3 text-center text-sm text-white/70 sm:text-start">

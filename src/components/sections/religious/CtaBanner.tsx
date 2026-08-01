@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function CtaBanner() {
@@ -23,12 +23,14 @@ export function CtaBanner() {
             </p>
           </FadeIn>
           <FadeIn direction="up" delay={0.3}>
-            <Link
+            <Button
               href="/donate"
-              className="mt-8 inline-block w-full rounded-full bg-white px-10 py-4 text-lg font-bold text-secondary-dark transition hover:scale-105 sm:w-auto"
+              variant="white"
+              size="lg"
+              className="mt-8 w-full sm:w-auto"
             >
               {t("religious.cta.button")}
-            </Link>
+            </Button>
           </FadeIn>
         </div>
       </Container>

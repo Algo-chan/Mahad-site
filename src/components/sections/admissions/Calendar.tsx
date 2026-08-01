@@ -13,7 +13,7 @@ interface CalendarEvent {
 
 const badgeStyles: Record<CalendarEvent["type"], string> = {
   academic: "bg-primary/10 text-primary",
-  event: "bg-accent/10 text-accent",
+  event: "bg-accent/10 text-accent-dark dark:text-accent",
   holiday: "bg-secondary/10 text-secondary",
 };
 

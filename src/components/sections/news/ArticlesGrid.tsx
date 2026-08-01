@@ -8,7 +8,7 @@ import type { NewsArticle } from "./FeaturedArticle";
 
 const CATEGORY_COLORS: Record<string, string> = {
   announcement: "bg-primary/10 text-primary",
-  event: "bg-accent/10 text-accent",
+  event: "bg-accent/10 text-accent-dark dark:text-accent",
   achievement: "bg-secondary/10 text-secondary",
   charity: "bg-purple-500/10 text-purple-500",
 };

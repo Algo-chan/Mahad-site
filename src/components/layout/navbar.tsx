@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Search, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SearchModal } from "@/components/layout/SearchModal";
+import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -138,15 +139,13 @@ export function Navbar() {
           </button>
           <LanguageSwitcher isScrolled={isScrolled} />
           <ThemeToggle isScrolled={isScrolled} />
-          <Link
+          <Button
             href="/donate"
-            className={cn(
-              "hidden h-10 items-center whitespace-nowrap rounded-full bg-accent px-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-dark md:inline-flex",
-              isScrolled && "shadow-md"
-            )}
+            size="sm"
+            className={cn("hidden md:inline-flex", isScrolled && "shadow-md")}
           >
             {t("nav.donate")}
-          </Link>
+          </Button>
           <button
             type="button"
             className={cn(
@@ -173,7 +172,7 @@ export function Navbar() {
         {open && (
           <motion.nav
             id="mobile-menu"
-            className="fixed inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-neutral-200 bg-white md:hidden dark:border-neutral-800 dark:bg-neutral-950"
+            className="fixed inset-x-0 top-16 z-40 min-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-neutral-200 bg-white md:hidden dark:border-neutral-800 dark:bg-neutral-950"
             initial={{ opacity: 0, y: -24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -24 }}
@@ -181,21 +180,28 @@ export function Navbar() {
             aria-label="Mobile"
           >
             <Container className="flex flex-col py-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "border-b border-border py-3 text-lg font-medium text-neutral-900 transition-colors hover:bg-muted dark:text-white",
-                    item.cta
-                      ? "my-3 flex items-center justify-center rounded-full bg-accent px-4 py-3 text-white hover:bg-accent-dark"
-                      : "px-3"
-                  )}
-                >
-                  {t(navKeyByHref[item.href])}
-                </Link>
-              ))}
+              {navigation.map((item) =>
+                item.cta ? (
+                  <Button
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    size="lg"
+                    className="my-3 w-full"
+                  >
+                    {t(navKeyByHref[item.href])}
+                  </Button>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="border-b border-border px-3 py-3 text-lg font-medium text-neutral-900 transition-colors hover:bg-muted dark:text-white"
+                  >
+                    {t(navKeyByHref[item.href])}
+                  </Link>
+                )
+              )}
             </Container>
           </motion.nav>
         )}

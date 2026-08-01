@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Users } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function Hero() {
@@ -35,34 +35,51 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 pt-28 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-28 text-center sm:px-6 lg:px-8">
         <FadeIn direction="up" delay={0}>
-          <h1 className="break-words text-4xl font-bold text-white drop-shadow-lg md:text-5xl lg:text-6xl">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/90 backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+            {t("hero.badge")}
+          </span>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.1}>
+          <h1 className="mt-6 break-words text-4xl font-bold tracking-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl xl:text-7xl">
             {t("hero.title")}
           </h1>
         </FadeIn>
 
         <FadeIn direction="up" delay={0.2}>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90 md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
             {t("hero.subtitle")}
           </p>
         </FadeIn>
 
         <FadeIn direction="up" delay={0.35}>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link
+            <Button
               href="/donate"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-accent px-8 py-4 text-lg font-semibold text-white transition-transform hover:scale-105 hover:bg-accent-dark active:scale-95"
+              size="lg"
+              className="w-full ring-4 ring-accent/30 animate-pulse sm:w-auto"
             >
               {t("hero.ctaPrimary")}
-            </Link>
-            <Link
+            </Button>
+            <Button
               href="/about"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-lg text-white backdrop-blur transition-colors hover:bg-white/20"
+              variant="outline"
+              size="lg"
+              className="w-full border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20 hover:text-white sm:w-auto"
             >
               {t("hero.ctaSecondary")}
-            </Link>
+            </Button>
           </div>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={0.45}>
+          <p className="mt-10 inline-flex items-center justify-center gap-2 text-sm font-medium text-white/80">
+            <Users className="h-4 w-4 shrink-0" aria-hidden="true" />
+            {t("hero.trustBadge")}
+          </p>
         </FadeIn>
       </div>
 

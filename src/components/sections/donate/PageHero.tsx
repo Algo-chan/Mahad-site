@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
-import Link from "next/link";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const HEARTS = [
@@ -48,12 +48,9 @@ export function PageHero() {
             </p>
           </FadeIn>
           <FadeIn direction="up" delay={0.35}>
-            <Link
-              href="#donate-methods"
-              className="mt-8 inline-block rounded-full bg-accent px-10 py-4 text-lg font-bold text-white shadow-xl transition hover:scale-105 hover:bg-accent-dark"
-            >
+            <Button href="#donate-methods" size="lg" className="mt-8 px-10">
               {t("donate.cta.button")}
-            </Link>
+            </Button>
           </FadeIn>
         </div>
       </Container>

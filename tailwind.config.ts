@@ -37,6 +37,11 @@ const config: Config = {
           light: "hsl(var(--accent-light))",
           dark: "hsl(var(--accent-dark))",
         },
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          foreground: "hsl(var(--cta-foreground))",
+          dark: "hsl(var(--cta-dark))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -69,6 +74,29 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "Noto Sans Arabic", "system-ui", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+      },
+      fontSize: {
+        h1: [
+          "clamp(2.5rem, 5vw, 4rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" },
+        ],
+        h2: [
+          "clamp(2rem, 4vw, 3rem)",
+          { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "700" },
+        ],
+        h3: [
+          "clamp(1.5rem, 3vw, 2rem)",
+          { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "700" },
+        ],
+        h4: [
+          "clamp(1.25rem, 2vw, 1.5rem)",
+          { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" },
+        ],
+        body: ["1rem", { lineHeight: "1.6" }],
+        lead: [
+          "clamp(1.125rem, 1.5vw, 1.25rem)",
+          { lineHeight: "1.6", fontWeight: "400" },
+        ],
       },
       keyframes: {
         "fade-in": {

@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import { ShieldCheck } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export function FinalCta() {
@@ -33,12 +34,18 @@ export function FinalCta() {
             </p>
           </FadeIn>
           <FadeIn direction="up" delay={0.3}>
-            <Link
+            <Button
               href="#donate-methods"
-              className="mt-10 inline-block w-full rounded-full bg-white px-12 py-5 text-xl font-bold text-accent-dark shadow-2xl transition hover:scale-105 active:scale-95 sm:w-auto"
+              variant="white"
+              size="xl"
+              className="mt-10 w-full px-12 sm:w-auto"
             >
               {t("donate.cta.button")}
-            </Link>
+            </Button>
+            <p className="mt-6 flex items-center justify-center gap-2 text-sm font-medium text-white/85">
+              <ShieldCheck className="h-5 w-5 shrink-0" aria-hidden="true" />
+              {t("donate.guarantee")}
+            </p>
           </FadeIn>
         </div>
       </Container>

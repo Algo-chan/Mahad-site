@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { StickyDonateBar } from "@/components/layout/StickyDonateBar";
 import { AccessibilityProvider } from "@/components/providers/AccessibilityProvider";
 import { I18nProvider } from "@/components/providers/I18nProvider";
 import { CookieConsent } from "@/components/ui/CookieConsent";
@@ -88,6 +89,7 @@ export default function RootLayout({
               <Footer />
               <CookieConsent />
               <ScrollToTop />
+              <StickyDonateBar />
             </AccessibilityProvider>
           </I18nProvider>
         </ThemeProvider>

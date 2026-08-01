@@ -16,7 +16,9 @@
     "title": "Empowering Minds, Inspiring Futures",
     "subtitle": "Providing world-class academic and religious education to build the next generation of ethical leaders.",
     "ctaPrimary": "Support Our Mission",
-    "ctaSecondary": "Learn About Us"
+    "ctaSecondary": "Learn About Us",
+    "badge": "Non-Profit Islamic School in Addis Ababa",
+    "trustBadge": "Trusted by 500+ families and 45 dedicated teachers"
   },
   "about": {
     "pageTitle": "About MAHAD Al-TOWHEED",
@@ -559,7 +561,8 @@
       "title": "Give Today. Change Forever.",
       "subtitle": "A $30 donation educates a child for one month. A $300 donation educates a child for a full year.",
       "button": "Make a Donation"
-    }
+    },
+    "guarantee": "100% of your donation goes directly to student programs."
   },
   "partners": {
     "pageTitle": "Our Partners",
@@ -622,7 +625,8 @@
       "sending": "Sending...",
       "success": "Thank you! Your message has been received. We will contact you soon.",
       "required": "This field is required",
-      "invalidEmail": "Please enter a valid email address"
+      "invalidEmail": "Please enter a valid email address",
+      "privacy": "We respect your privacy. Your details are only used to respond to your message."
     },
     "info": {
       "title": "Get in Touch",

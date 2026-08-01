@@ -34,7 +34,7 @@ export function CommunityPrograms() {
                 <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
                   {program.title}
                 </h3>
-                <span className="shrink-0 rounded-full bg-accent/10 px-3 py-1 text-sm font-bold text-accent">
+                <span className="shrink-0 rounded-full bg-accent/10 px-3 py-1 text-sm font-bold text-accent-dark dark:text-accent">
                   {program.stat}
                 </span>
               </div>

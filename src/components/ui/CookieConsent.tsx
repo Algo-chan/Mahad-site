@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const STORAGE_KEY = "cookie-consent";
@@ -74,13 +75,13 @@ export function CookieConsent() {
               >
                 {t("cookies.decline")}
               </button>
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="sm"
                 onClick={() => updateConsent("accepted")}
-                className="rounded-full bg-primary px-6 py-2 font-semibold text-white transition hover:bg-primary-dark"
               >
                 {t("cookies.accept")}
-              </button>
+              </Button>
             </div>
           </div>
         </motion.div>

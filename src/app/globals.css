@@ -25,6 +25,9 @@
   --accent-foreground: 0 0% 100%;
   --accent-light: 43 96% 56%;
   --accent-dark: 23 83% 31%;
+  --cta: 11 100% 60%;
+  --cta-foreground: 0 0% 9%;
+  --cta-dark: 11 85% 48%;
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 47%;
   --destructive: 0 72% 51%;
@@ -119,6 +122,16 @@
     min-height: 100dvh;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
   }
 }
 

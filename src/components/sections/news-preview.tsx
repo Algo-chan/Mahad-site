@@ -35,7 +35,7 @@ export function NewsPreview() {
                 className="flex aspect-video items-center justify-center rounded-t-2xl bg-neutral-200 text-sm text-neutral-400 dark:bg-neutral-800"
               />
               <div className="flex flex-1 flex-col p-6">
-                <span className="self-start rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase text-accent">
+                <span className="self-start rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase text-accent-dark dark:text-accent">
                   {item.category}
                 </span>
                 <h3 className="mt-3 text-xl font-bold text-neutral-900 transition-colors group-hover:text-primary dark:text-white">

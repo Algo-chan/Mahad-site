@@ -4,9 +4,10 @@ import { CheckCircle2 } from "lucide-react";
 import { useRef, useState } from "react";
 import { SectionHeader } from "@/components/animations/SectionHeader";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
-type FormErrors = Partial<Record<"name" | "email" | "subject" | "message", string>>;
+type FormErrors = Partial<Record<"name" | "email" | "message", string>>;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -16,18 +17,48 @@ const INPUT_CLASSES =
 const LABEL_CLASSES =
   "mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300";
 
+type FormValues = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+const INITIAL_VALUES: FormValues = {
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+};
+
+const REQUIRED_FIELDS: (keyof FormValues)[] = ["name", "email", "message"];
+
 export function ContactForm() {
   const { t } = useTranslation();
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [values, setValues] = useState<FormValues>(INITIAL_VALUES);
   const formRef = useRef<HTMLFormElement>(null);
+
+  const requiredFilled = REQUIRED_FIELDS.filter(
+    (field) => values[field].trim()
+  ).length;
+  const progress = Math.round((requiredFilled / REQUIRED_FIELDS.length) * 100);
+
+  const handleChange =
+    (field: keyof FormValues) =>
+    (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setValues((prev) => ({ ...prev, [field]: event.target.value }));
+      if (field in errors) {
+        setErrors((prev) => ({ ...prev, [field]: undefined }));
+      }
+    };
 
   const validate = (formData: FormData) => {
     const nextErrors: FormErrors = {};
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
-    const subject = String(formData.get("subject") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
 
     if (!name) nextErrors.name = t("contact.form.required");
@@ -36,7 +67,6 @@ export function ContactForm() {
     } else if (!EMAIL_REGEX.test(email)) {
       nextErrors.email = t("contact.form.invalidEmail");
     }
-    if (!subject) nextErrors.subject = t("contact.form.required");
     if (!message) nextErrors.message = t("contact.form.required");
 
     return nextErrors;
@@ -56,6 +86,7 @@ export function ContactForm() {
     window.setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
+      setValues(INITIAL_VALUES);
       formRef.current?.reset();
     }, 1200);
   };
@@ -79,37 +110,60 @@ export function ContactForm() {
             </p>
           </div>
         ) : (
-          <form ref={formRef} onSubmit={handleSubmit} noValidate className="mt-12 space-y-5">
-            <div>
-              <label htmlFor="contact-name" className={LABEL_CLASSES}>
-                {t("contact.form.name")}
-              </label>
-              <input
-                id="contact-name"
-                type="text"
-                name="name"
-                placeholder={t("contact.form.namePlaceholder")}
-                className={`${INPUT_CLASSES} ${errors.name ? "border-red-500" : ""}`}
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            noValidate
+            className="mt-12 space-y-5"
+          >
+            <div className="relative h-1 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
+              <div
+                className="h-full rounded-full bg-primary transition-all duration-500"
+                style={{ width: `${progress}%` }}
+                role="progressbar"
+                aria-valuenow={progress}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-label={t("contact.form.subtitle")}
               />
-              {errors.name ? (
-                <p className="mt-1 text-xs text-red-500">{errors.name}</p>
-              ) : null}
             </div>
 
-            <div>
-              <label htmlFor="contact-email" className={LABEL_CLASSES}>
-                {t("contact.form.email")}
-              </label>
-              <input
-                id="contact-email"
-                type="email"
-                name="email"
-                placeholder={t("contact.form.emailPlaceholder")}
-                className={`${INPUT_CLASSES} ${errors.email ? "border-red-500" : ""}`}
-              />
-              {errors.email ? (
-                <p className="mt-1 text-xs text-red-500">{errors.email}</p>
-              ) : null}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="contact-name" className={LABEL_CLASSES}>
+                  {t("contact.form.name")}
+                </label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  name="name"
+                  value={values.name}
+                  onChange={handleChange("name")}
+                  placeholder={t("contact.form.namePlaceholder")}
+                  className={`${INPUT_CLASSES} ${errors.name ? "border-red-500" : ""}`}
+                />
+                {errors.name ? (
+                  <p className="mt-1 text-xs text-red-500">{errors.name}</p>
+                ) : null}
+              </div>
+
+              <div>
+                <label htmlFor="contact-email" className={LABEL_CLASSES}>
+                  {t("contact.form.email")}
+                </label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange("email")}
+                  placeholder={t("contact.form.emailPlaceholder")}
+                  className={`${INPUT_CLASSES} ${errors.email ? "border-red-500" : ""}`}
+                />
+                {errors.email ? (
+                  <p className="mt-1 text-xs text-red-500">{errors.email}</p>
+                ) : null}
+              </div>
             </div>
 
             <div>
@@ -120,25 +174,11 @@ export function ContactForm() {
                 id="contact-phone"
                 type="tel"
                 name="phone"
+                value={values.phone}
+                onChange={handleChange("phone")}
                 placeholder={t("contact.form.phonePlaceholder")}
                 className={INPUT_CLASSES}
               />
-            </div>
-
-            <div>
-              <label htmlFor="contact-subject" className={LABEL_CLASSES}>
-                {t("contact.form.subject")}
-              </label>
-              <input
-                id="contact-subject"
-                type="text"
-                name="subject"
-                placeholder={t("contact.form.subjectPlaceholder")}
-                className={`${INPUT_CLASSES} ${errors.subject ? "border-red-500" : ""}`}
-              />
-              {errors.subject ? (
-                <p className="mt-1 text-xs text-red-500">{errors.subject}</p>
-              ) : null}
             </div>
 
             <div>
@@ -149,6 +189,8 @@ export function ContactForm() {
                 id="contact-message"
                 name="message"
                 rows={5}
+                value={values.message}
+                onChange={handleChange("message")}
                 placeholder={t("contact.form.messagePlaceholder")}
                 className={`${INPUT_CLASSES} resize-y ${errors.message ? "border-red-500" : ""}`}
               />
@@ -157,13 +199,22 @@ export function ContactForm() {
               ) : null}
             </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full rounded-full bg-primary px-8 py-3.5 font-bold text-white transition hover:scale-105 hover:bg-primary-dark active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
-            >
-              {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
-            </button>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Button
+                type="submit"
+                variant="secondary"
+                size="lg"
+                disabled={isSubmitting}
+                className="w-full sm:w-auto"
+              >
+                {isSubmitting
+                  ? t("contact.form.sending")
+                  : t("contact.form.submit")}
+              </Button>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                {t("contact.form.privacy")}
+              </p>
+            </div>
           </form>
         )}
       </Container>

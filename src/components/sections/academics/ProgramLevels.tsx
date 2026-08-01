@@ -35,7 +35,7 @@ export function ProgramLevels() {
                   <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary">
                     {t(`academics.levels.${key}.grades`)}
                   </span>
-                  <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                  <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent-dark dark:text-accent">
                     {t(`academics.levels.${key}.age`)}
                   </span>
                 </div>

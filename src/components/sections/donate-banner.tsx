@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/layout/container";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const circles = [
@@ -42,12 +43,14 @@ export function DonateBanner() {
         </div>
 
         <div className="flex flex-col items-center gap-3 md:items-end">
-          <Link
+          <Button
             href="/donate"
-            className="w-full rounded-full bg-white px-10 py-4 text-center text-lg font-bold text-accent-dark shadow-lg transition-transform hover:scale-105 active:scale-95 sm:w-auto"
+            variant="white"
+            size="lg"
+            className="w-full sm:w-auto"
           >
             {t("home.donateBanner.cta")}
-          </Link>
+          </Button>
           <Link
             href="/donate"
             className="text-sm text-white/80 underline transition-colors hover:text-white"

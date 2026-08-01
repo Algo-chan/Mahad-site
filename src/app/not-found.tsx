@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function NotFound() {
@@ -15,12 +15,9 @@ export default function NotFound() {
       <p className="mt-2 text-neutral-600 dark:text-neutral-400">
         {t("notFound.subtitle")}
       </p>
-      <Link
-        href="/"
-        className="mt-6 rounded-full bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-dark"
-      >
+      <Button href="/" variant="secondary" size="md" className="mt-6 px-8">
         {t("notFound.button")}
-      </Link>
+      </Button>
     </div>
   );
 }

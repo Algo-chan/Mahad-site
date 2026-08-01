@@ -33,7 +33,7 @@ export function FeaturedArticle({ article }: { article: NewsArticle }) {
 
             <div className="flex flex-col justify-center bg-white p-6 dark:bg-neutral-950 md:p-10">
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                <span className="inline-block w-fit rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase text-accent">
+                <span className="inline-block w-fit rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase text-accent-dark dark:text-accent">
                   {t("news.featured.badge")}
                 </span>
                 <span className="inline-block w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
