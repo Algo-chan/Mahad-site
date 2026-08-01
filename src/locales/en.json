@@ -561,6 +561,116 @@
       "button": "Make a Donation"
     }
   },
+  "partners": {
+    "pageTitle": "Our Partners",
+    "heroSubtitle": "Together, we create lasting change.",
+    "intro": {
+      "title": "Partnerships That Transform Lives",
+      "text": "MAHAD Al-TOWHEED is proud to collaborate with international organizations, NGOs, government bodies, and private sponsors who share our vision of accessible, quality education. These partnerships enable us to expand our reach, improve our facilities, and provide scholarships to students in need."
+    },
+    "categories": {
+      "all": "All Partners",
+      "international": "International NGOs",
+      "local": "Local Organizations",
+      "government": "Government",
+      "corporate": "Corporate Sponsors"
+    },
+    "partnersList": [
+      { "name": "Global Relief Foundation", "category": "international", "description": "Providing annual funding for student scholarships and teacher training programs since 2018." },
+      { "name": "Ethiopian Ministry of Education", "category": "government", "description": "Official accreditation and curriculum oversight ensuring national standards compliance." },
+      { "name": "East Africa Education Trust", "category": "international", "description": "Infrastructure grants that funded our science laboratory and digital library." },
+      { "name": "Local Community Council", "category": "local", "description": "Land allocation, security support, and community engagement initiatives." },
+      { "name": "Bright Futures Corp", "category": "corporate", "description": "Technology donations including 50 computers and internet infrastructure." },
+      { "name": "Islamic Development Bank", "category": "international", "description": "Religious education curriculum development and teacher certification support." },
+      { "name": "Regional Health Office", "category": "government", "description": "Student health screenings, vaccination programs, and nutrition guidance." },
+      { "name": "Al-Hikma Foundation", "category": "local", "description": "Religious texts, prayer facilities maintenance, and Ramadan meal sponsorships." },
+      { "name": "TechForGood Initiative", "category": "corporate", "description": "Digital literacy training and software donations for staff and students." },
+      { "name": "UNICEF Ethiopia", "category": "international", "description": "WASH program support ensuring clean water and sanitation facilities." }
+    ],
+    "empty": "No partners found in this category.",
+    "join": {
+      "title": "Become a Partner",
+      "subtitle": "Join a network of organizations committed to educational excellence.",
+      "benefits": [
+        "Detailed quarterly impact reports",
+        "Logo placement on website and campus signage",
+        "Tax-deductible donation receipts",
+        "Direct communication with school leadership",
+        "Invitation to annual partner appreciation event"
+      ],
+      "cta": "Contact Our Partnership Team",
+      "email": "partnerships@mahadaltowheed.org"
+    }
+  },
+  "contact": {
+    "pageTitle": "Contact Us",
+    "heroSubtitle": "We are here to answer your questions and welcome your support.",
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we will respond within 48 hours.",
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone Number (optional)",
+      "phonePlaceholder": "+251 91 234 5678",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been received. We will contact you soon.",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "subtitle": "Visit us, call us, or send an email.",
+      "address": {
+        "title": "School Address",
+        "value": "MAHAD Al-TOWHEED, Bole Sub-City, Addis Ababa, Ethiopia"
+      },
+      "phone": {
+        "title": "Phone Numbers",
+        "primary": "+251 91 234 5678",
+        "secondary": "+251 91 876 5432"
+      },
+      "email": {
+        "title": "Email Addresses",
+        "general": "info@mahadaltowheed.org",
+        "admissions": "admissions@mahadaltowheed.org",
+        "donations": "donate@mahadaltowheed.org"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "weekdays": "Monday – Friday: 8:00 AM – 4:00 PM",
+        "saturday": "Saturday: 9:00 AM – 12:00 PM",
+        "sunday": "Sunday: Closed"
+      }
+    },
+    "map": {
+      "title": "Find Us",
+      "placeholder": "Google Maps will be embedded here. Replace this div with an iframe or static map image."
+    },
+    "social": {
+      "title": "Follow Us",
+      "subtitle": "Stay connected on social media.",
+      "labels": {
+        "facebook": "Facebook",
+        "twitter": "X (Twitter)",
+        "instagram": "Instagram",
+        "youtube": "YouTube",
+        "telegram": "Telegram"
+      }
+    }
+  },
+  "search": {
+    "placeholder": "Search pages...",
+    "noResults": "No results found",
+    "shortcut": "Press Cmd+K to search",
+    "close": "Close search"
+  },
   "home": {
     "intro": {
       "title": "Welcome to MAHAD Al-TOWHEED",
@@ -615,5 +725,26 @@
       "cta": "Donate Now",
       "secondary": "Or become a monthly sponsor"
     }
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience. By continuing, you agree to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "a11y": {
+    "skipToMain": "Skip to main content",
+    "scrollToTop": "Back to top"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Get the latest news and events delivered to your inbox.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you are looking for does not exist.",
+    "button": "Go Home"
   }
 }

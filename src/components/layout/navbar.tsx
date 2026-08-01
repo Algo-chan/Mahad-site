@@ -4,8 +4,9 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { GraduationCap, Menu, X } from "lucide-react";
+import { GraduationCap, Menu, Search, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
+import { SearchModal } from "@/components/layout/SearchModal";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -18,6 +19,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -25,6 +27,19 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  React.useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setIsSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
 
   return (
     <header
@@ -65,7 +80,7 @@ export function Navbar() {
           {navigation
             .filter((item) => !item.cta)
             .map((item) => {
-              const active = pathname === item.href;
+              const active = normalizedPathname === item.href;
               return (
                 <Link
                   key={item.href}
@@ -95,6 +110,19 @@ export function Navbar() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            className={cn(
+              "flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300",
+              isScrolled
+                ? "text-neutral-900 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-800"
+                : "text-white hover:bg-white/10"
+            )}
+            aria-label={t("search.placeholder")}
+            onClick={() => setIsSearchOpen(true)}
+          >
+            <Search className="h-5 w-5" aria-hidden="true" />
+          </button>
           <LanguageSwitcher isScrolled={isScrolled} />
           <ThemeToggle isScrolled={isScrolled} />
           <Link
@@ -159,6 +187,8 @@ export function Navbar() {
           </motion.nav>
         )}
       </AnimatePresence>
+
+      <SearchModal open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </header>
   );
 }

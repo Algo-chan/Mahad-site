@@ -13,7 +13,7 @@ interface StaggerContainerProps {
 export function StaggerContainer({
   children,
   className,
-  staggerDelay = 0.12,
+  staggerDelay = 0.1,
   duration = 0.5,
 }: StaggerContainerProps) {
   const reduceMotion = useReducedMotion();

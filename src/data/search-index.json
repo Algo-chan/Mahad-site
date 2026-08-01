@@ -1,0 +1,13 @@
+[
+  { "title": "Home", "path": "/", "excerpt": "Welcome to MAHAD Al-TOWHEED" },
+  { "title": "About", "path": "/about", "excerpt": "Our history, vision, and mission" },
+  { "title": "Academic Programs", "path": "/academics", "excerpt": "Kindergarten through Grade 10" },
+  { "title": "Religious Education", "path": "/religious", "excerpt": "Islamic education Grade 1-12" },
+  { "title": "Admissions", "path": "/admissions", "excerpt": "Application requirements and process" },
+  { "title": "Gallery", "path": "/gallery", "excerpt": "School photos and events" },
+  { "title": "News & Events", "path": "/news", "excerpt": "Latest announcements and activities" },
+  { "title": "Our Impact", "path": "/impact", "excerpt": "Statistics and success stories" },
+  { "title": "Donate", "path": "/donate", "excerpt": "Support our mission financially" },
+  { "title": "Partners", "path": "/partners", "excerpt": "Our collaborators and sponsors" },
+  { "title": "Contact", "path": "/contact", "excerpt": "Get in touch with us" }
+]

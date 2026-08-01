@@ -1,18 +1,54 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { AccessibilityProvider } from "@/components/providers/AccessibilityProvider";
 import { I18nProvider } from "@/components/providers/I18nProvider";
+import { CookieConsent } from "@/components/ui/CookieConsent";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import schoolInfo from "@/data/school.json";
 import "./globals.css";
 
+const SITE_URL = "https://mahadaltowheed.org";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: schoolInfo.name,
-    template: `%s | ${schoolInfo.name}`,
+    default: "MAHAD Al-TOWHEED | Academic & Religious Excellence",
+    template: "%s | MAHAD Al-TOWHEED",
   },
   description:
-    "Providing quality academic and religious education to our community.",
+    "MAHAD Al-TOWHEED provides quality academic and religious education in Ethiopia. Join us in building the next generation of ethical leaders.",
+  keywords: [
+    "school",
+    "education",
+    "Ethiopia",
+    "Islamic school",
+    "academic",
+    "religious education",
+    "non-profit",
+    "charity",
+  ],
+  authors: [{ name: "MAHAD Al-TOWHEED" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: "MAHAD Al-TOWHEED",
+    title: "MAHAD Al-TOWHEED",
+    description: "Quality academic and religious education in Ethiopia",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MAHAD Al-TOWHEED",
+    description: "Quality academic and religious education",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +58,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="flex min-h-screen flex-col font-sans text-foreground antialiased">
         <div
           aria-hidden="true"
@@ -32,9 +76,19 @@ export default function RootLayout({
         </div>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <I18nProvider>
-            <Navbar />
-            <main className="flex flex-1 flex-col">{children}</main>
-            <Footer />
+            <AccessibilityProvider>
+              <Navbar />
+              <main
+                id="main-content"
+                tabIndex={-1}
+                className="flex flex-1 flex-col focus:outline-none"
+              >
+                {children}
+              </main>
+              <Footer />
+              <CookieConsent />
+              <ScrollToTop />
+            </AccessibilityProvider>
           </I18nProvider>
         </ThemeProvider>
       </body>

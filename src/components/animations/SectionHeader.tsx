@@ -22,11 +22,11 @@ export function SectionHeader({
         className
       )}
     >
-      <h2 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+      <h2 className="text-2xl font-bold tracking-tight md:text-4xl">
         {title}
       </h2>
       {subtitle ? (
-        <p className="text-base text-muted-foreground sm:text-lg">
+        <p className="text-base text-neutral-500 dark:text-neutral-400 md:text-lg">
           {subtitle}
         </p>
       ) : null}

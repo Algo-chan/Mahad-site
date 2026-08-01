@@ -77,7 +77,7 @@ export function ArticlesGrid({ articles }: { articles: NewsArticle[] }) {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-12 dark:bg-neutral-950">
+    <section className="bg-white py-16 dark:bg-neutral-950 md:py-24">
       <Container>
         {articles.length === 0 ? (
           <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-neutral-300 py-20 text-center dark:border-neutral-700">

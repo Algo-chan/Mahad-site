@@ -24,7 +24,7 @@ export function FadeIn({
   children,
   className,
   delay = 0,
-  duration = 0.5,
+  duration = 0.6,
   direction = "up",
 }: FadeInProps) {
   const reduceMotion = useReducedMotion();

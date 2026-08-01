@@ -32,7 +32,7 @@ export function SuccessStories() {
               className="relative flex flex-col rounded-2xl border border-neutral-200 bg-neutral-50 p-6 md:p-8 dark:border-neutral-800 dark:bg-neutral-900"
             >
               <Quote
-                className="absolute top-6 h-8 w-8 text-primary/30 ltr:left-6 rtl:right-6"
+                className="absolute start-6 top-6 h-8 w-8 text-primary/30"
                 aria-hidden="true"
               />
 
