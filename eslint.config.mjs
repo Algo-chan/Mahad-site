@@ -12,7 +12,18 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Static export output.
+    "dist/**",
+    // Runtime config file uses CommonJS.
+    "next.config.js",
   ]),
+  {
+    // Static export uses plain <img> (next/image requires an optimizer);
+    // placeholders are replaced with real photos later.
+    rules: {
+      "@next/next/no-img-element": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

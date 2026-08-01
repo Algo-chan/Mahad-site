@@ -1,0 +1,12 @@
+[
+  { "label": "Home", "href": "/" },
+  { "label": "About", "href": "/about" },
+  { "label": "Academics", "href": "/academics" },
+  { "label": "Religious", "href": "/religious" },
+  { "label": "Admissions", "href": "/admissions" },
+  { "label": "Gallery", "href": "/gallery" },
+  { "label": "News", "href": "/news" },
+  { "label": "Impact", "href": "/impact" },
+  { "label": "Donate", "href": "/donate", "cta": true },
+  { "label": "Contact", "href": "/contact" }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Abebe Kebede",
+    "role": "Parent",
+    "quote": "MAHAD Al-TOWHEED changed my daughter's life. She went from struggling to read to topping her class in just one year.",
+    "image": null
+  },
+  {
+    "id": 2,
+    "name": "Sister Mary",
+    "role": "Partner, Global Charity Org",
+    "quote": "We have partnered with schools across East Africa, and the transparency and dedication here are unmatched.",
+    "image": null
+  },
+  {
+    "id": 3,
+    "name": "Dawit Hailu",
+    "role": "Grade 8 Student",
+    "quote": "I love my school. The teachers don't just teach lessons—they teach us how to be good people.",
+    "image": null
+  },
+  {
+    "id": 4,
+    "name": "Dr. Lemma Tesfaye",
+    "role": "Board Member",
+    "quote": "Investing in this institution means investing in the future of our nation. The ROI is measured in lives transformed.",
+    "image": null
+  }
+]

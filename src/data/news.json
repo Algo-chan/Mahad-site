@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "New Science Laboratory Opens",
+    "date": "July 15, 2026",
+    "category": "Facility",
+    "excerpt": "Thanks to our generous donors, students now have access to modern science equipment."
+  },
+  {
+    "id": 2,
+    "title": "Annual Charity Run Raises $5,000",
+    "date": "June 28, 2026",
+    "category": "Event",
+    "excerpt": "The local community came together to support our scholarship fund in a record-breaking event."
+  },
+  {
+    "id": 3,
+    "title": "Religious Education Program Expands",
+    "date": "June 10, 2026",
+    "category": "Program",
+    "excerpt": "We are now offering advanced religious studies through Grade 12 with certified instructors."
+  }
+]

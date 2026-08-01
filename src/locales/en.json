@@ -1,0 +1,123 @@
+{
+  "schoolName": "MAHAD Al-TOWHEED",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "academics": "Academics",
+    "religious": "Religious",
+    "admissions": "Admissions",
+    "gallery": "Gallery",
+    "news": "News",
+    "impact": "Impact",
+    "donate": "Donate",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Empowering Minds, Inspiring Futures",
+    "subtitle": "Providing world-class academic and religious education to build the next generation of ethical leaders.",
+    "ctaPrimary": "Support Our Mission",
+    "ctaSecondary": "Learn About Us"
+  },
+  "about": {
+    "pageTitle": "About MAHAD Al-TOWHEED",
+    "heroSubtitle": "Our story, our vision, and our commitment to excellence.",
+    "history": {
+      "title": "Our History",
+      "p1": "MAHAD Al-TOWHEED was founded with a clear vision to serve the community by providing outstanding education that blends modern academics with strong Islamic values.",
+      "p2": "What began as a modest community initiative has grown into a leading educational institution, serving hundreds of students annually and producing graduates who positively shape society."
+    },
+    "founder": {
+      "title": "Founder's Vision",
+      "quote": "Education is the foundation of every great society. When we invest in a child's mind and character, we invest in the future of our entire community.",
+      "name": "Founder of MAHAD Al-TOWHEED"
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "subtitle": "Key milestones that shaped our institution.",
+      "milestones": [
+        { "year": "2010", "title": "Foundation", "desc": "MAHAD Al-TOWHEED was established to address the educational needs of the local community." },
+        { "year": "2013", "title": "First Graduation", "desc": "Our first class of students completed their primary education with exceptional results." },
+        { "year": "2016", "title": "New Campus", "desc": "Expanded to a larger facility with modern classrooms, a library, and science labs." },
+        { "year": "2019", "title": "Religious Program Launch", "desc": "Introduced a comprehensive religious education curriculum from Grade 1 through Grade 12." },
+        { "year": "2022", "title": "International Partnerships", "desc": "Formed partnerships with global charities and NGOs to support student scholarships." },
+        { "year": "2026", "title": "500+ Students", "desc": "Now serving over 500 students across academic and religious programs." }
+      ]
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "text": "We believe in nurturing both the intellect and the soul. Our approach combines rigorous academic standards with moral and spiritual development, ensuring every student grows into a knowledgeable, ethical, and compassionate member of society."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be a beacon of educational excellence and moral leadership, recognized for producing graduates who transform their communities through knowledge, integrity, and service."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To provide accessible, high-quality academic and religious education that empowers students with the knowledge, skills, and ethical values needed to become leaders in their communities."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "items": [
+        { "title": "Integrity", "desc": "We uphold the highest ethical standards in everything we do." },
+        { "title": "Compassion", "desc": "We serve our students and community with kindness and empathy." },
+        { "title": "Excellence", "desc": "We strive for the highest standards in teaching and learning." },
+        { "title": "Community", "desc": "We believe in giving back and strengthening the bonds of society." }
+      ]
+    }
+  },
+  "home": {
+    "intro": {
+      "title": "Welcome to MAHAD Al-TOWHEED",
+      "subtitle": "A place where academic excellence meets moral foundation.",
+      "p1": "Founded with a vision to serve our community, MAHAD Al-TOWHEED provides comprehensive education from Kindergarten through Grade 10, alongside a dedicated religious education program from Grade 1 through Grade 12.",
+      "p2": "We believe every child deserves access to quality education that nurtures both the mind and the spirit. Our dedicated teachers, modern facilities, and values-driven curriculum create an environment where students thrive.",
+      "p3": "As a non-profit institution, we rely on the generosity of donors and partners to continue our mission. Your support directly impacts the lives of children who would otherwise be left behind.",
+      "cta": "Read Our Story"
+    },
+    "missionCards": {
+      "sectionTitle": "Our Foundation",
+      "sectionSubtitle": "Guided by purpose, driven by impact.",
+      "missionTitle": "Our Mission",
+      "missionText": "To provide accessible, high-quality academic and religious education that empowers students with knowledge, skills, and ethical values to become leaders in their communities.",
+      "visionTitle": "Our Vision",
+      "visionText": "To be a beacon of educational excellence and moral leadership in our region, recognized for producing graduates who positively transform society.",
+      "valuesTitle": "Our Values",
+      "valuesText": "Integrity, Compassion, Excellence, Community Service, and Spiritual Growth form the core of everything we teach and practice at MAHAD Al-TOWHEED."
+    },
+    "quickStats": {
+      "students": "Students",
+      "teachers": "Teachers",
+      "grades": "Grade Levels",
+      "years": "Years of Service"
+    },
+    "achievements": {
+      "sectionTitle": "Our Impact",
+      "sectionSubtitle": "Real results that transform lives.",
+      "featuredTitle": "100% Primary Completion Rate",
+      "featuredDesc": "For three consecutive years, every student who entered our primary program has successfully completed their studies and transitioned to the next grade level.",
+      "graduates": "Graduates",
+      "graduatesDesc": "Alumni serving their communities.",
+      "projects": "Community Projects",
+      "projectsDesc": "Clean water, food programs, and more.",
+      "ranking": "Top 10 Regional Ranking",
+      "rankingDesc": "Recognized for academic excellence.",
+      "partners": "International Partners",
+      "partnersDesc": "NGOs and charities supporting our mission."
+    },
+    "testimonials": {
+      "sectionTitle": "Voices of Our Community",
+      "sectionSubtitle": "Hear from students, parents, and partners."
+    },
+    "news": {
+      "sectionTitle": "Latest News & Events",
+      "sectionSubtitle": "Stay updated with our journey.",
+      "viewAll": "View All News"
+    },
+    "donateBanner": {
+      "title": "Every Child Deserves an Education",
+      "subtitle": "Your donation provides books, meals, uniforms, and hope. 100% of donations go directly to student programs.",
+      "cta": "Donate Now",
+      "secondary": "Or become a monthly sponsor"
+    }
+  }
+}
