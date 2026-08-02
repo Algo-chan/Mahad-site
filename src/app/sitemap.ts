@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mahad.fcncare.com'
   const SITE_URL = 'https://mahad.fcncare.com'
