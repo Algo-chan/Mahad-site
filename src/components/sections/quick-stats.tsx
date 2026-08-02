@@ -1,14 +1,14 @@
 "use client";
 
-import { BookOpen, Clock, GraduationCap, Users } from "lucide-react";
+import { Clock, GraduationCap, HeartHandshake, Users } from "lucide-react";
 import { CountUp } from "@/components/animations/CountUp";
 import { Container } from "@/components/layout/container";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const stats = [
-  { labelKey: "home.quickStats.students", value: 500, suffix: "+", icon: Users },
-  { labelKey: "home.quickStats.teachers", value: 45, icon: GraduationCap },
-  { labelKey: "home.quickStats.grades", value: 12, icon: BookOpen },
+  { labelKey: "home.quickStats.students", value: 1000, suffix: "+", icon: Users },
+  { labelKey: "home.quickStats.teachers", value: 50, suffix: "+", icon: GraduationCap },
+  { labelKey: "home.quickStats.services", value: 30, suffix: "+", icon: HeartHandshake },
   { labelKey: "home.quickStats.years", value: 15, suffix: "+", icon: Clock },
 ];
 

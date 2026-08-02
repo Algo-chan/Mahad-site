@@ -17,7 +17,7 @@
     "subtitle": "Providing world-class academic and religious education to build the next generation of ethical leaders.",
     "ctaPrimary": "Support Our Mission",
     "ctaSecondary": "Learn About Us",
-    "trustBadge": "Trusted by 500+ families and 45 dedicated teachers"
+    "trustBadge": "Trusted by 1000+ students and 50+ dedicated teachers"
   },
   "about": {
     "pageTitle": "About MAHAD Al-TOWHEED",
@@ -25,7 +25,7 @@
     "history": {
       "title": "Our History",
       "p1": "MAHAD Al-TOWHEED was founded with a clear vision to serve the community by providing outstanding education that blends modern academics with strong Islamic values.",
-      "p2": "What began as a modest community initiative has grown into a leading educational institution, serving hundreds of students annually and producing graduates who positively shape society."
+      "p2": "What began as a modest community initiative has grown into a leading educational institution, serving over 1,000 students annually and producing graduates who positively shape society."
     },
     "founder": {
       "title": "Founder's Vision",
@@ -41,7 +41,7 @@
         { "year": "2016", "title": "New Campus", "desc": "Expanded to a larger facility with modern classrooms, a library, and science labs." },
         { "year": "2019", "title": "Religious Program Launch", "desc": "Introduced a comprehensive religious education curriculum from Grade 1 through Grade 12." },
         { "year": "2022", "title": "International Partnerships", "desc": "Formed partnerships with global charities and NGOs to support student scholarships." },
-        { "year": "2026", "title": "500+ Students", "desc": "Now serving over 500 students across academic and religious programs." }
+        { "year": "2026", "title": "1000+ Students", "desc": "Now serving over 1,000 students across academic and religious programs." }
       ]
     },
     "philosophy": {
@@ -442,11 +442,11 @@
       "title": "By The Numbers",
       "subtitle": "The impact of your support in real-time.",
       "items": [
-        { "value": 500, "suffix": "+", "label": "Students Enrolled", "description": "From kindergarten through grade 10" },
+        { "value": 1000, "suffix": "+", "label": "Students Enrolled", "description": "From kindergarten through grade 10" },
         { "value": 250, "suffix": "+", "label": "Graduates", "description": "Equipped for higher education and leadership" },
-        { "value": 45, "suffix": "", "label": "Dedicated Teachers", "description": "Passionate educators shaping futures" },
+        { "value": 50, "suffix": "+", "label": "Dedicated Teachers", "description": "Passionate educators shaping futures" },
         { "value": 120, "suffix": "+", "label": "Active Volunteers", "description": "Community members giving their time" },
-        { "value": 35, "suffix": "+", "label": "Charity Projects", "description": "Food, water, and education initiatives" },
+        { "value": 30, "suffix": "+", "label": "Community Services", "description": "Programs supporting students and families" },
         { "value": 15, "suffix": "", "label": "Years of Service", "description": "Consistent commitment since 2010" }
       ]
     },
@@ -632,7 +632,7 @@
       "subtitle": "Visit us, call us, or send an email.",
       "address": {
         "title": "School Address",
-        "value": "MAHAD Al-TOWHEED, Bole Sub-City, Addis Ababa, Ethiopia"
+        "value": "MAHAD Al-TOWHEED, Bulchana (05), Shashemane, West Arsi Zone, Oromia, Ethiopia"
       },
       "phone": {
         "title": "Phone Numbers",
@@ -696,7 +696,7 @@
     "quickStats": {
       "students": "Students",
       "teachers": "Teachers",
-      "grades": "Grade Levels",
+      "services": "Services",
       "years": "Years of Service"
     },
     "achievements": {
