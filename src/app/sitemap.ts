@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mahad.fcncare.com'
+  const SITE_URL = 'https://mahad.fcncare.com'
   
   const routes = [
     '',

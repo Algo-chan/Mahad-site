@@ -9,7 +9,7 @@ import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import "./globals.css";
 
-const SITE_URL = "https://mahadaltowheed.org";
+const SITE_URL = 'https://mahad.fcncare.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
