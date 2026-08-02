@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   },
   description:
     "MAHAD Al-TOWHEED provides quality academic and religious education in Ethiopia. Join us in building the next generation of ethical leaders.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   verification: {
     google: 'webvZ8eYJX0km7UVVcqnCZOBv6uRdCLLO1LwswGBYxg', // <-- paste YOUR code here
   },
