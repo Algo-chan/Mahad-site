@@ -85,8 +85,18 @@ export function Lightbox({
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.25 }}
           >
-            <div className="flex aspect-video w-full max-w-4xl items-center justify-center rounded-xl bg-neutral-800 px-4 text-center text-xl text-white">
-              {current.placeholder}
+            <div className="flex aspect-video w-full max-w-4xl items-center justify-center overflow-hidden rounded-xl bg-neutral-800">
+              {current.src ? (
+                <img
+                  src={current.src}
+                  alt={current.title}
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <span className="px-4 text-center text-xl text-white">
+                  {current.placeholder ?? current.title}
+                </span>
+              )}
             </div>
             <p className="mt-4 text-center text-lg font-medium text-white">
               {current.title}

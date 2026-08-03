@@ -9,7 +9,8 @@ export interface GalleryItem {
   id: number;
   category: string;
   title: string;
-  placeholder: string;
+  src?: string;
+  placeholder?: string;
 }
 
 export function GalleryGrid({
@@ -56,9 +57,18 @@ export function GalleryGrid({
                   className="group relative block aspect-square w-full cursor-pointer overflow-hidden rounded-xl bg-neutral-200 dark:bg-neutral-800"
                   aria-label={image.title}
                 >
-                  <span className="flex h-full w-full items-center justify-center p-2 text-center text-xs text-neutral-500 dark:text-neutral-500">
-                    {image.placeholder}
-                  </span>
+                  {image.src ? (
+                    <img
+                      src={image.src}
+                      alt={image.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span className="flex h-full w-full items-center justify-center p-2 text-center text-xs text-neutral-500 dark:text-neutral-500">
+                      {image.placeholder ?? image.title}
+                    </span>
+                  )}
                   <span className="absolute inset-0 hidden items-center justify-center bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:flex">
                     <Eye className="h-8 w-8 text-white" aria-hidden="true" />
                   </span>
