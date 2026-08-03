@@ -4,7 +4,6 @@ import { useState } from "react";
 import { ArticlesGrid } from "@/components/sections/news/ArticlesGrid";
 import { CategoryTabs, type NewsTab } from "@/components/sections/news/CategoryTabs";
 import { FeaturedArticle, type NewsArticle } from "@/components/sections/news/FeaturedArticle";
-import { useTranslation } from "@/hooks/useTranslation";
 
 const TAB_TO_CATEGORY: Partial<Record<NewsTab, string>> = {
   announcements: "announcement",
@@ -13,12 +12,10 @@ const TAB_TO_CATEGORY: Partial<Record<NewsTab, string>> = {
   charity: "charity",
 };
 
-export function NewsContent() {
-  const { t } = useTranslation();
+export function NewsContent({ articles }: { articles: NewsArticle[] }) {
   const [activeTab, setActiveTab] = useState<NewsTab>("all");
 
-  const articles = (t("news.articles") as NewsArticle[]) ?? [];
-  const featured = articles.find((article) => article.featured);
+  const featured = articles.find((article) => article.featured) ?? articles[0];
   const category = TAB_TO_CATEGORY[activeTab];
   const visible = articles.filter(
     (article) => !article.featured && (!category || article.category === category),
@@ -26,7 +23,7 @@ export function NewsContent() {
 
   return (
     <div>
-      <FeaturedArticle article={featured ?? articles[0]} />
+      {featured ? <FeaturedArticle article={featured} /> : null}
       <CategoryTabs active={activeTab} onChange={setActiveTab} />
       <ArticlesGrid articles={visible} />
     </div>

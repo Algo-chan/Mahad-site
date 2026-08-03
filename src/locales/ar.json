@@ -502,6 +502,65 @@
   "donate": {
     "pageTitle": "تبرع",
     "heroSubtitle": "كرمك يبني المستقبل. كل مساهمة تخلق تموجاً من الأمل.",
+    "howToDonate": {
+      "title": "كيفية التبرع",
+      "subtitle": "استخدم إحدى القنوات الرسمية أدناه، ثم أكّد تبرعك بإرسال الإيصال. يرجى قراءة ملاحظة التحقق قبل التحويل.",
+      "transparency": "100% من التبرعات تذهب مباشرة إلى البرامج الطلابية — الكتب والوجبات والزي المدرسي والمرافق.",
+      "channelsTitle": "قنوات التبرع الرسمية",
+      "channelsSubtitle": "هذه هي الطرق الرسمية الوحيدة للتبرع. يتم الآن تأكيد التفاصيل مع إدارة المدرسة.",
+      "accountHolderLabel": "اسم الحساب",
+      "accountNumberLabel": "رقم الحساب / رمز التاجر",
+      "bankLabel": "البنك والفرع",
+      "items": [
+        {
+          "name": "تحويل مصرفي",
+          "icon": "bank",
+          "accountHolder": "[ORG_LEGAL_NAME — confirm exact registered name with school administration]",
+          "accountNumber": "[ACCOUNT_NUMBER — to be provided by school]",
+          "bank": "[BANK_NAME / BRANCH]"
+        },
+        {
+          "name": "تيليبير",
+          "icon": "mobile",
+          "accountHolder": "[ORG_LEGAL_NAME — confirm exact registered name with school administration]",
+          "accountNumber": "[ACCOUNT_NUMBER — to be provided by school]",
+          "bank": "[BANK_NAME / BRANCH]"
+        },
+        {
+          "name": "سي بي إي بير",
+          "icon": "mobile",
+          "accountHolder": "[ORG_LEGAL_NAME — confirm exact registered name with school administration]",
+          "accountNumber": "[ACCOUNT_NUMBER — to be provided by school]",
+          "bank": "[BANK_NAME / BRANCH]"
+        }
+      ],
+      "verificationTitle": "يرجى التحقق قبل التحويل",
+      "verification": "⚠️ يرجى التأكد من تطابق اسم الحساب تماماً قبل التحويل. لن يطلب معهد التوحيد منك أبداً إرسال أموال إلى حساب شخصي أو تغيير هذه التفاصيل عبر البريد الإلكتروني أو الرسائل النصية.",
+      "confirm": {
+        "title": "أكّد تبرعك",
+        "subtitle": "بعد التحويل، أرسل لنا إيصالك لنؤكد هديتك ونصدر، عند الطلب، إيصال تبرع لسجلاتك.",
+        "emailLabel": "بريد التبرعات",
+        "emailText": "أرسل إيصال التحويل أو لقطة الشاشة عبر البريد إلى:",
+        "emailCta": "إرسال الإيصال",
+        "formTitle": "أرسل إيصال التحويل عبر الإنترنت",
+        "formSubtitle": "املأ التفاصيل أدناه وسيتم تحويل إرسالك إلى صندوق بريد التبرعات.",
+        "name": "الاسم الكامل",
+        "namePlaceholder": "اسمك",
+        "email": "عنوان البريد الإلكتروني",
+        "emailPlaceholder": "you@example.com",
+        "amount": "مبلغ التبرع",
+        "amountPlaceholder": "مثال: 1,000 بر / 50 دولاراً",
+        "channel": "القناة المستخدمة",
+        "channelPlaceholder": "اختر قناة",
+        "receipt": "إيصال التحويل / لقطة الشاشة",
+        "receiptHint": "PNG أو JPG أو PDF. يُستخدم إيصالك فقط لتأكيد هديتك.",
+        "submit": "إرسال الإيصال",
+        "sending": "جاري الإرسال...",
+        "success": "شكراً! تم استلام إرسالك. سنؤكد تبرعك عبر البريد الإلكتروني.",
+        "required": "هذا الحقل مطلوب",
+        "invalidEmail": "يرجى إدخال بريد إلكتروني صالح"
+      }
+    },
     "why": {
       "title": "لماذا دعمك مهم",
       "subtitle": "في مجتمع تعاني فيه العديد من الأسر من توفير الضروريات الأساسية، تبرعك ليس صدقة—إنه استثمار في القدرة البشرية.",

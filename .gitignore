@@ -20,6 +20,12 @@
 # static export output
 /dist/
 
+# runtime data (admin credentials, sessions, auth log, posts)
+/data/
+
+# admin-uploaded images
+/public/uploads/
+
 # production
 /build
 

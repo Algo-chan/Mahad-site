@@ -111,14 +111,24 @@ export function ContactInfo() {
           <div>
             <SectionHeader title={t("contact.map.title")} align="left" />
 
-            <div className="mt-8 flex aspect-[4/3] flex-col items-center justify-center rounded-2xl border border-neutral-300 bg-neutral-200 p-6 text-center dark:border-neutral-700 dark:bg-neutral-800">
-              <MapPin
-                className="mb-3 h-10 w-10 text-neutral-400"
-                aria-hidden="true"
+            <div className="mt-8 flex aspect-[4/3] flex-col overflow-hidden rounded-2xl border border-neutral-300 bg-neutral-200 dark:border-neutral-700 dark:bg-neutral-800">
+              <iframe
+                src="https://www.google.com/maps?q=Bulchana%20(05)%2C%20Shashemane%2C%20West%20Arsi%20Zone%2C%20Oromia%2C%20Ethiopia&output=embed"
+                title={t("contact.map.title")}
+                className="h-full w-full flex-1 border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
               />
-              <p className="max-w-sm text-sm text-neutral-500">
-                {t("contact.map.placeholder")}
-              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Bulchana%20(05)%2C%20Shashemane%2C%20West%20Arsi%20Zone%2C%20Oromia%2C%20Ethiopia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 border-t border-neutral-300 bg-white p-3 text-sm font-semibold text-primary hover:underline dark:border-neutral-700 dark:bg-neutral-950"
+              >
+                <MapPin className="h-4 w-4" aria-hidden="true" />
+                {t("contact.info.address.value")}
+              </a>
             </div>
           </div>
         </div>

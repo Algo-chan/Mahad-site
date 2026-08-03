@@ -502,6 +502,65 @@
   "donate": {
     "pageTitle": "Donate",
     "heroSubtitle": "Your generosity builds futures. Every contribution creates a ripple of hope.",
+    "howToDonate": {
+      "title": "How to Donate",
+      "subtitle": "Use one of the official channels below, then confirm your gift by sending your receipt. Please read the verification note before transferring.",
+      "transparency": "100% of donations go directly to student programs — books, meals, uniforms, and facilities.",
+      "channelsTitle": "Official Donation Channels",
+      "channelsSubtitle": "These are the only official ways to give. Details are being confirmed with school administration.",
+      "accountHolderLabel": "Account Holder",
+      "accountNumberLabel": "Account Number / Merchant Code",
+      "bankLabel": "Bank & Branch",
+      "items": [
+        {
+          "name": "Bank Transfer",
+          "icon": "bank",
+          "accountHolder": "[ORG_LEGAL_NAME — confirm exact registered name with school administration]",
+          "accountNumber": "[ACCOUNT_NUMBER — to be provided by school]",
+          "bank": "[BANK_NAME / BRANCH]"
+        },
+        {
+          "name": "Telebirr",
+          "icon": "mobile",
+          "accountHolder": "[ORG_LEGAL_NAME — confirm exact registered name with school administration]",
+          "accountNumber": "[ACCOUNT_NUMBER — to be provided by school]",
+          "bank": "[BANK_NAME / BRANCH]"
+        },
+        {
+          "name": "CBE Birr",
+          "icon": "mobile",
+          "accountHolder": "[ORG_LEGAL_NAME — confirm exact registered name with school administration]",
+          "accountNumber": "[ACCOUNT_NUMBER — to be provided by school]",
+          "bank": "[BANK_NAME / BRANCH]"
+        }
+      ],
+      "verificationTitle": "Please Verify Before You Transfer",
+      "verification": "⚠️ Please verify the account name matches exactly before transferring. MAHAD Al-TOWHEED will never ask you to send money to a personal account or change these details via email/SMS.",
+      "confirm": {
+        "title": "Confirm Your Donation",
+        "subtitle": "After you transfer, send us your receipt so we can confirm your gift and, on request, issue a donation receipt for your records.",
+        "emailLabel": "Donations Inbox",
+        "emailText": "Email your transfer receipt or screenshot to:",
+        "emailCta": "Send Your Receipt",
+        "formTitle": "Send Your Transfer Receipt Online",
+        "formSubtitle": "Fill in the details below and your submission will be forwarded to our donations inbox.",
+        "name": "Full Name",
+        "namePlaceholder": "Your name",
+        "email": "Email Address",
+        "emailPlaceholder": "you@example.com",
+        "amount": "Donation Amount",
+        "amountPlaceholder": "e.g. 1,000 ETB / $50",
+        "channel": "Channel Used",
+        "channelPlaceholder": "Select a channel",
+        "receipt": "Transfer Receipt / Screenshot",
+        "receiptHint": "PNG, JPG or PDF. Your receipt is only used to confirm your gift.",
+        "submit": "Submit Receipt",
+        "sending": "Sending...",
+        "success": "Thank you! Your submission has been received. We will confirm your donation by email.",
+        "required": "This field is required",
+        "invalidEmail": "Please enter a valid email address"
+      }
+    },
     "why": {
       "title": "Why Your Support Matters",
       "subtitle": "In a community where many families struggle to afford basic necessities, your donation is not charity—it is an investment in human potential.",
