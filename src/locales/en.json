@@ -675,6 +675,10 @@
     "close": "Close search"
   },
   "home": {
+    "hook": {
+      "title": "About MAHAD Al-TOWHEED",
+      "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1990. We provide combined academic education from Kindergarten through Grade 10 and religious education from Grade 1 through Grade 12. With over 1000 students, 50 teachers, and support from international partners, our mission is to build ethical leaders through quality education and spiritual development."
+    },
     "intro": {
       "title": "Welcome to MAHAD Al-TOWHEED",
       "subtitle": "A place where academic excellence meets moral foundation.",
