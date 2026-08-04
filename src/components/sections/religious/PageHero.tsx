@@ -10,7 +10,7 @@ export function PageHero() {
   return (
     <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
       <img
-        src="/images/gallery/gallery-6.jpg"
+        src="/images/gallery/gallery-13.jpg"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
