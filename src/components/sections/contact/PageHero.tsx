@@ -9,15 +9,14 @@ export function PageHero() {
 
   return (
     <section className="relative overflow-hidden bg-primary py-20 md:py-28">
-      <div
-        className="absolute inset-0 opacity-[0.08]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)",
-          backgroundSize: "24px 24px",
-        }}
+      <img
+        src="/images/gallery/gallery-4.jpg"
+        alt=""
         aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
       />
+      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-4xl text-center">
