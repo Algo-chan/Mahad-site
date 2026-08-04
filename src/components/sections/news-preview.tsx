@@ -5,13 +5,11 @@ import { ArrowRight, Calendar } from "lucide-react";
 import { SectionHeader } from "@/components/animations/SectionHeader";
 import { StaggerContainer } from "@/components/animations/StaggerContainer";
 import { Container } from "@/components/layout/container";
-import type { NewsArticle } from "@/components/sections/news/FeaturedArticle";
+import newsItems from "@/data/news.json";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export function NewsPreview({ items }: { items: NewsArticle[] }) {
+export function NewsPreview() {
   const { t } = useTranslation();
-
-  if (items.length === 0) return null;
 
   return (
     <section className="bg-white py-16 dark:bg-neutral-950 md:py-24">
@@ -25,28 +23,20 @@ export function NewsPreview({ items }: { items: NewsArticle[] }) {
           staggerDelay={0.1}
           className="grid grid-cols-1 gap-6 md:grid-cols-3"
         >
-          {items.map((item) => (
+          {newsItems.map((item) => (
             <Link
               key={item.id}
               href="/news"
               className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50 transition-shadow hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900"
             >
-              {item.image ? (
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="aspect-video w-full object-cover"
-                />
-              ) : (
-                <div
-                  role="img"
-                  aria-label="News image placeholder"
-                  className="flex aspect-video items-center justify-center rounded-t-2xl bg-neutral-200 text-sm text-neutral-400 dark:bg-neutral-800"
-                />
-              )}
+              <div
+                role="img"
+                aria-label="News image placeholder"
+                className="flex aspect-video items-center justify-center rounded-t-2xl bg-neutral-200 text-sm text-neutral-400 dark:bg-neutral-800"
+              />
               <div className="flex flex-1 flex-col p-6">
                 <span className="self-start rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase text-accent-dark dark:text-accent">
-                  {t(`news.categories.${item.category}`)}
+                  {item.category}
                 </span>
                 <h3 className="mt-3 text-xl font-bold text-neutral-900 transition-colors group-hover:text-primary dark:text-white">
                   {item.title}

@@ -6,14 +6,13 @@ import { Container } from "@/components/layout/container";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export interface NewsArticle {
-  id: string;
+  id: number;
   title: string;
   excerpt: string;
   category: string;
   date: string;
   readTime: number;
   featured: boolean;
-  image?: string;
 }
 
 export function FeaturedArticle({ article }: { article: NewsArticle }) {
@@ -24,21 +23,13 @@ export function FeaturedArticle({ article }: { article: NewsArticle }) {
       <Container>
         <FadeIn>
           <article className="grid grid-cols-1 overflow-hidden rounded-3xl border border-neutral-200 shadow-lg md:grid-cols-2 dark:border-neutral-800">
-            {article.image ? (
-              <img
-                src={article.image}
-                alt={article.title}
-                className="aspect-[4/3] object-cover md:aspect-auto md:h-full"
-              />
-            ) : (
-              <div
-                className="flex aspect-[4/3] items-center justify-center bg-primary/20 text-primary md:aspect-auto md:h-full"
-                role="img"
-                aria-label="Featured Image"
-              >
-                <ImageIcon className="h-16 w-16 opacity-40" aria-hidden="true" />
-              </div>
-            )}
+            <div
+              className="flex aspect-[4/3] items-center justify-center bg-primary/20 text-primary md:aspect-auto md:h-full"
+              role="img"
+              aria-label="Featured Image"
+            >
+              <ImageIcon className="h-16 w-16 opacity-40" aria-hidden="true" />
+            </div>
 
             <div className="flex flex-col justify-center bg-white p-6 dark:bg-neutral-950 md:p-10">
               <div className="mb-4 flex flex-wrap items-center gap-2">

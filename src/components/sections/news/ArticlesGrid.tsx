@@ -25,21 +25,13 @@ function ArticleCard({ article, index }: { article: NewsArticle; index: number }
       transition={{ duration: 0.3, delay: index * 0.05 }}
       className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
     >
-      {article.image ? (
-        <img
-          src={article.image}
-          alt={article.title}
-          className="aspect-[16/9] w-full object-cover"
-        />
-      ) : (
-        <div
-          className="flex aspect-[16/9] items-center justify-center bg-primary/15 text-primary"
-          role="img"
-          aria-label="Article Image"
-        >
-          <ImageIcon className="h-12 w-12 opacity-40" aria-hidden="true" />
-        </div>
-      )}
+      <div
+        className="flex aspect-[16/9] items-center justify-center bg-primary/15 text-primary"
+        role="img"
+        aria-label="Article Image"
+      >
+        <ImageIcon className="h-12 w-12 opacity-40" aria-hidden="true" />
+      </div>
 
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex flex-wrap items-center gap-2">
