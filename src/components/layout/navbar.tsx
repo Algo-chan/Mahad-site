@@ -8,7 +8,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Search, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SearchModal } from "@/components/layout/SearchModal";
-import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -325,15 +324,7 @@ export function Navbar() {
                 })}
               </div>
 
-              <div className="shrink-0 space-y-4 border-t border-border p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-                <Button
-                  href="/donate"
-                  size="lg"
-                  className="w-full"
-                  onClick={() => setOpen(false)}
-                >
-                  {t(navKeyByHref["/donate"])}
-                </Button>
+              <div className="shrink-0 border-t border-border p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
                 <div className="flex items-center justify-between">
                   <LanguageSwitcher isScrolled />
                   <ThemeToggle isScrolled />
