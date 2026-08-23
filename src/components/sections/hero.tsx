@@ -45,13 +45,17 @@ export function Hero() {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.15}>
-          <h1 className="mx-auto max-w-4xl break-words text-4xl font-bold text-white drop-shadow-md md:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="mx-auto max-w-4xl break-words text-4xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-md md:text-5xl lg:text-6xl xl:text-7xl">
             {t("hero.title")}
           </h1>
         </FadeIn>
 
         <FadeIn direction="up" delay={0.3}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 md:text-xl">
+          <span
+            className="mx-auto mt-7 mb-6 block h-1 w-16 rounded-full bg-secondary-light"
+            aria-hidden="true"
+          />
+          <p className="mx-auto max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
             {t("hero.subtitle")}
           </p>
         </FadeIn>

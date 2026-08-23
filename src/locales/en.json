@@ -3,6 +3,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "programs": "Programs",
     "academics": "Academics",
     "religious": "Religious",
     "admissions": "Admissions",
@@ -742,6 +743,9 @@
       "p2": "We believe every child deserves access to quality education that nurtures both the mind and the spirit. Our dedicated teachers, modern facilities, and values-driven curriculum create an environment where students thrive.",
       "p3": "As a non-profit institution, we rely on the generosity of donors and partners to continue our mission. Your support directly impacts the lives of children who would otherwise be left behind.",
       "cta": "Read Our Story"
+    },
+    "pillars": {
+      "sectionTitle": "What Sets Us Apart"
     },
     "missionCards": {
       "sectionTitle": "Our Foundation",

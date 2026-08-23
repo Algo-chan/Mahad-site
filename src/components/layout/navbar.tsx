@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Search, X } from "lucide-react";
+import { ChevronDown, Menu, Search, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SearchModal } from "@/components/layout/SearchModal";
 import { Button } from "@/components/ui/button";
@@ -16,12 +16,15 @@ import navigation from "@/data/navigation.json";
 import { navKeyByHref } from "@/lib/nav-keys";
 import { cn } from "@/lib/utils";
 
+const PROGRAM_HREFS = ["/academics", "/religious"];
+
 export function Navbar() {
   const { t } = useTranslation();
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+  const [programsOpen, setProgramsOpen] = React.useState(false);
   const closeButtonRef = React.useRef<HTMLButtonElement>(null);
 
   React.useEffect(() => {
@@ -39,6 +42,7 @@ export function Navbar() {
       }
       if (event.key === "Escape") {
         setOpen(false);
+        setProgramsOpen(false);
         setIsSearchOpen(false);
       }
     };
@@ -57,6 +61,7 @@ export function Navbar() {
   }, [open]);
 
   const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+  const programsActive = PROGRAM_HREFS.includes(normalizedPathname);
   const name = String(t("schoolName"));
   const [nameLine1, nameLine2] = name.split(" ");
 
@@ -108,35 +113,114 @@ export function Navbar() {
           aria-label="Main"
         >
           {navigation
-            .filter((item) => !item.cta)
+            .filter((item) => !item.cta && !PROGRAM_HREFS.includes(item.href))
             .map((item) => {
               const active = normalizedPathname === item.href;
               return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "group relative flex min-h-[44px] items-center whitespace-nowrap px-3 text-sm font-medium transition-colors duration-300",
-                    active
-                      ? isScrolled
-                        ? "font-semibold text-primary"
-                        : "font-semibold text-white"
-                      : isScrolled
-                        ? "text-neutral-700 hover:text-primary dark:text-neutral-300 dark:hover:text-primary"
-                        : "text-white/90 hover:text-white"
-                  )}
-                >
-                  {t(navKeyByHref[item.href])}
-                  <span
+                <React.Fragment key={item.href}>
+                  <Link
+                    href={item.href}
                     className={cn(
-                      "absolute inset-x-3 bottom-1.5 h-0.5 rounded-full transition-all duration-300",
+                      "group relative flex min-h-[44px] items-center whitespace-nowrap px-3 text-sm font-medium transition-colors duration-300",
                       active
-                        ? "bg-secondary-light opacity-100"
-                        : "bg-current opacity-0 group-hover:opacity-40"
+                        ? isScrolled
+                          ? "font-semibold text-primary"
+                          : "font-semibold text-white"
+                        : isScrolled
+                          ? "text-neutral-700 hover:text-primary dark:text-neutral-300 dark:hover:text-primary"
+                          : "text-white/90 hover:text-white"
                     )}
-                    aria-hidden="true"
-                  />
-                </Link>
+                  >
+                    {t(navKeyByHref[item.href])}
+                    <span
+                      className={cn(
+                        "absolute inset-x-3 bottom-1.5 h-0.5 rounded-full transition-all duration-300",
+                        active
+                          ? "bg-secondary-light opacity-100"
+                          : "bg-current opacity-0 group-hover:opacity-40"
+                      )}
+                      aria-hidden="true"
+                    />
+                  </Link>
+                  {item.href === "/about" ? (
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setProgramsOpen(true)}
+                      onMouseLeave={() => setProgramsOpen(false)}
+                    >
+                      <button
+                        type="button"
+                        aria-haspopup="true"
+                        aria-expanded={programsOpen}
+                        onClick={() => setProgramsOpen((v) => !v)}
+                        className={cn(
+                          "group relative flex min-h-[44px] items-center gap-1 whitespace-nowrap px-3 text-sm font-medium transition-colors duration-300",
+                          programsActive
+                            ? isScrolled
+                              ? "font-semibold text-primary"
+                              : "font-semibold text-white"
+                            : isScrolled
+                              ? "text-neutral-700 hover:text-primary dark:text-neutral-300 dark:hover:text-primary"
+                              : "text-white/90 hover:text-white"
+                        )}
+                      >
+                        {t("nav.programs")}
+                        <ChevronDown
+                          className={cn(
+                            "h-4 w-4 transition-transform duration-300",
+                            programsOpen && "rotate-180"
+                          )}
+                          aria-hidden="true"
+                        />
+                        <span
+                          className={cn(
+                            "absolute inset-x-3 bottom-1.5 h-0.5 rounded-full transition-all duration-300",
+                            programsActive
+                              ? "bg-secondary-light opacity-100"
+                              : "bg-current opacity-0 group-hover:opacity-40"
+                          )}
+                          aria-hidden="true"
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {programsOpen ? (
+                          <motion.div
+                            initial={{ opacity: 0, y: 6 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 6 }}
+                            transition={{ duration: 0.18 }}
+                            className="absolute start-0 top-full z-50 pt-2"
+                          >
+                            <div className="min-w-[13rem] overflow-hidden rounded-xl border border-border bg-card py-1.5 shadow-xl">
+                              {PROGRAM_HREFS.map((href) => {
+                                const subActive =
+                                  normalizedPathname === href;
+                                return (
+                                  <Link
+                                    key={href}
+                                    href={href}
+                                    onClick={() => setProgramsOpen(false)}
+                                    aria-current={
+                                      subActive ? "page" : undefined
+                                    }
+                                    className={cn(
+                                      "flex min-h-[44px] items-center px-4 py-2 text-sm font-medium transition-colors",
+                                      subActive
+                                        ? "bg-primary/5 font-semibold text-primary dark:bg-primary/10"
+                                        : "text-neutral-700 hover:bg-muted dark:text-neutral-200 dark:hover:bg-neutral-900"
+                                    )}
+                                  >
+                                    {t(navKeyByHref[href])}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        ) : null}
+                      </AnimatePresence>
+                    </div>
+                  ) : null}
+                </React.Fragment>
               );
             })}
         </nav>

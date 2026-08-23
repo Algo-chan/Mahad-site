@@ -6,6 +6,7 @@ import { HookSection } from "@/components/sections/hook-section";
 import { Introduction } from "@/components/sections/introduction";
 import { MissionCards } from "@/components/sections/mission-cards";
 import { NewsPreview } from "@/components/sections/news-preview";
+import { Pillars } from "@/components/sections/pillars";
 import { QuickStats } from "@/components/sections/quick-stats";
 import { Testimonials } from "@/components/sections/testimonials";
 
@@ -23,6 +24,7 @@ export default function HomePage() {
       <HookSection />
       <QuickStats />
       <Introduction />
+      <Pillars />
       <MissionCards />
       <Achievements />
       <Testimonials />
