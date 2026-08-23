@@ -57,7 +57,7 @@ export function Footer() {
             <span className="h-1.5 w-1.5 rotate-45 bg-secondary-light" aria-hidden="true" />
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-1">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-0.5">
             {quickLinks.map((item) => (
               <li key={item.href}>
                 <Link
