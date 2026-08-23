@@ -19,15 +19,14 @@ export function CountUp({
   const ref = React.useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const reduceMotion = useReducedMotion();
-  const [value, setValue] = React.useState(0);
+  const hasAnimated = React.useRef(false);
+  const [value, setValue] = React.useState(end);
 
   React.useEffect(() => {
-    if (!inView) return;
+    if (!inView || reduceMotion || hasAnimated.current) return;
 
-    if (reduceMotion) {
-      const frame = requestAnimationFrame(() => setValue(end));
-      return () => cancelAnimationFrame(frame);
-    }
+    hasAnimated.current = true;
+    setValue(0);
 
     let rafId = 0;
     const start = performance.now();

@@ -36,7 +36,7 @@
       "title": "Our Journey",
       "subtitle": "Key milestones that shaped our institution.",
       "milestones": [
-        { "year": "2010", "title": "Foundation", "desc": "MAHAD Al-TOWHEED was established to address the educational needs of the local community." },
+        { "year": "1985", "title": "Foundation", "desc": "MAHAD Al-TOWHEED was established to address the educational needs of the local community." },
         { "year": "2013", "title": "First Graduation", "desc": "Our first class of students completed their primary education with exceptional results." },
         { "year": "2016", "title": "New Campus", "desc": "Expanded to a larger facility with modern classrooms, a library, and science labs." },
         { "year": "2019", "title": "Religious Program Launch", "desc": "Introduced a comprehensive religious education curriculum from Grade 1 through Grade 12." },
@@ -308,7 +308,7 @@
       "title": "Begin Your Application Today",
       "subtitle": "Spaces are limited. Secure your child's future by applying now.",
       "button": "Download Application Form",
-      "contact": "Or call us at +251 91 234 5678"
+      "contact": "Or call us at +251 916 006 695"
     }
   },
   "gallery": {
@@ -447,7 +447,7 @@
         { "value": 50, "suffix": "+", "label": "Dedicated Teachers", "description": "Passionate educators shaping futures" },
         { "value": 120, "suffix": "+", "label": "Active Volunteers", "description": "Community members giving their time" },
         { "value": 30, "suffix": "+", "label": "Community Services", "description": "Programs supporting students and families" },
-        { "value": 15, "suffix": "", "label": "Years of Service", "description": "Consistent commitment since 2010" }
+        { "value": 40, "suffix": "+", "label": "Years of Service", "description": "Consistent commitment since 1985" }
       ]
     },
     "stories": {
@@ -603,7 +603,7 @@
         { "title": "Corporate Partnership", "desc": "Partner with us as an organization. We offer branding recognition and detailed impact reports.", "cta": "Partner With Us" },
         { "title": "In-Kind Donation", "desc": "Donate books, computers, lab equipment, or school supplies. We handle shipping logistics.", "cta": "Send Supplies" }
       ],
-      "contact": "For bank transfers, wire instructions, or telebirr payments, please contact our finance office at finance@mahadaltowheed.org or +251 91 234 5678."
+      "contact": "For bank transfers, wire instructions, or telebirr payments, please contact our finance office at mahad@gmail.com or +251 916 006 695."
     },
     "transparency": {
       "title": "Financial Accountability",
@@ -660,7 +660,7 @@
         "Invitation to annual partner appreciation event"
       ],
       "cta": "Contact Our Partnership Team",
-      "email": "partnerships@mahadaltowheed.org"
+      "email": "mahad@gmail.com"
     }
   },
   "contact": {
@@ -674,7 +674,7 @@
       "email": "Email Address",
       "emailPlaceholder": "you@example.com",
       "phone": "Phone Number (optional)",
-      "phonePlaceholder": "+251 91 234 5678",
+      "phonePlaceholder": "+251 916 006 695",
       "subject": "Subject",
       "subjectPlaceholder": "How can we help?",
       "message": "Message",
@@ -695,14 +695,11 @@
       },
       "phone": {
         "title": "Phone Numbers",
-        "primary": "+251 91 234 5678",
-        "secondary": "+251 91 876 5432"
+        "primary": "+251 916 006 695"
       },
       "email": {
         "title": "Email Addresses",
-        "general": "info@mahadaltowheed.org",
-        "admissions": "admissions@mahadaltowheed.org",
-        "donations": "donate@mahadaltowheed.org"
+        "general": "mahad@gmail.com"
       },
       "hours": {
         "title": "Office Hours",
@@ -736,7 +733,7 @@
   "home": {
     "hook": {
       "title": "About MAHAD Al-TOWHEED",
-      "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1990. We provide combined academic education from Kindergarten through Grade 10 and religious education from Grade 1 through Grade 12. With over 1000 students, 50 teachers, and support from international partners, our mission is to build ethical leaders through quality education and spiritual development."
+      "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1985. We provide combined academic education from Kindergarten through Grade 10 and religious education from Grade 1 through Grade 12. With over 1000 students, 50 teachers, and support from international partners, our mission is to build ethical leaders through quality education and spiritual development."
     },
     "intro": {
       "title": "Welcome to MAHAD Al-TOWHEED",

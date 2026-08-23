@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fraunces, Inter, Noto_Sans_Arabic } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { StickyDonateBar } from "@/components/layout/StickyDonateBar";
@@ -8,6 +9,24 @@ import { CookieConsent } from "@/components/ui/CookieConsent";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import "./globals.css";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  subsets: ["arabic"],
+  variable: "--font-arabic",
+  display: "swap",
+});
 
 const SITE_URL = 'https://mahad.fcncare.com';
 
@@ -65,23 +84,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${fraunces.variable} ${inter.variable} ${notoSansArabic.variable}`}
+    >
       <body className="flex min-h-screen flex-col font-sans text-foreground antialiased">
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-0 -z-10"
-        >
-          <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/site-bg.jpg')] opacity-40" />
-          <div className="absolute inset-0 bg-background/70 backdrop-blur-[2px] dark:bg-background/80" />
-        </div>
+          className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_85%_-10%,hsl(45_68%_52%/0.07),transparent_60%),radial-gradient(50rem_36rem_at_-10%_30%,hsl(162_73%_20%/0.06),transparent_55%),radial-gradient(46rem_30rem_at_110%_85%,hsl(20_74%_43%/0.05),transparent_55%)]"
+        />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <I18nProvider>
             <AccessibilityProvider>

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -21,6 +22,7 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+  const closeButtonRef = React.useRef<HTMLButtonElement>(null);
 
   React.useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -35,10 +37,24 @@ export function Navbar() {
         event.preventDefault();
         setIsSearchOpen(true);
       }
+      if (event.key === "Escape") {
+        setOpen(false);
+        setIsSearchOpen(false);
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  React.useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
 
   const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
   const name = String(t("schoolName"));
@@ -57,17 +73,17 @@ export function Navbar() {
       <Container className="flex h-16 items-center justify-between gap-2 md:h-18 md:gap-6">
         <Link href="/" className="flex shrink-0 items-center gap-2">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center">
-            <img
+            <Image
               src="/logo.png"
               alt={t("schoolName")}
-              width={40}
-              height={40}
+              width={80}
+              height={80}
               className="h-full w-full rounded-xl object-contain"
             />
           </span>
           <span
             className={cn(
-              "flex h-10 w-[5.5rem] flex-col justify-between text-sm font-bold leading-tight tracking-tight md:hidden",
+              "flex h-10 w-[5.5rem] flex-col justify-between font-display text-sm font-bold leading-tight tracking-tight md:hidden",
               isScrolled ? "text-primary dark:text-primary" : "text-white"
             )}
             aria-hidden="true"
@@ -79,7 +95,7 @@ export function Navbar() {
           </span>
           <span
             className={cn(
-              "hidden whitespace-nowrap text-lg font-bold tracking-tight md:block md:text-xl",
+              "hidden whitespace-nowrap font-display text-lg font-bold tracking-tight md:block md:text-xl",
               isScrolled ? "text-primary dark:text-primary" : "text-white"
             )}
           >
@@ -100,7 +116,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "group relative whitespace-nowrap px-3 py-2 text-sm font-medium transition-colors duration-300",
+                    "group relative flex min-h-[44px] items-center whitespace-nowrap px-3 text-sm font-medium transition-colors duration-300",
                     active
                       ? isScrolled
                         ? "font-semibold text-primary"
@@ -113,8 +129,10 @@ export function Navbar() {
                   {t(navKeyByHref[item.href])}
                   <span
                     className={cn(
-                      "absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-current transition-opacity duration-300",
-                      active ? "opacity-100" : "opacity-0"
+                      "absolute inset-x-3 bottom-1.5 h-0.5 rounded-full transition-all duration-300",
+                      active
+                        ? "bg-secondary-light opacity-100"
+                        : "bg-current opacity-0 group-hover:opacity-40"
                     )}
                     aria-hidden="true"
                   />
@@ -127,7 +145,7 @@ export function Navbar() {
           <button
             type="button"
             className={cn(
-              "hidden h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 sm:flex",
+              "flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300",
               isScrolled
                 ? "text-neutral-900 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-800"
                 : "text-white hover:bg-white/10"
@@ -137,7 +155,9 @@ export function Navbar() {
           >
             <Search className="h-5 w-5" aria-hidden="true" />
           </button>
-          <LanguageSwitcher isScrolled={isScrolled} />
+          <div className="hidden sm:flex">
+            <LanguageSwitcher isScrolled={isScrolled} />
+          </div>
           <ThemeToggle isScrolled={isScrolled} />
           <Button
             href="/donate"
@@ -149,62 +169,102 @@ export function Navbar() {
           <button
             type="button"
             className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 md:hidden",
+              "flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300 md:hidden",
               isScrolled
-                ? "text-neutral-900 hover:bg-accent dark:text-white"
+                ? "text-neutral-900 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-800"
                 : "text-white hover:bg-white/10"
             )}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label="Open menu"
             aria-expanded={open}
             aria-controls="mobile-menu"
-            onClick={() => setOpen((value) => !value)}
+            onClick={() => setOpen(true)}
           >
-            {open ? (
-              <X className="h-5 w-5" aria-hidden="true" />
-            ) : (
-              <Menu className="h-5 w-5" aria-hidden="true" />
-            )}
+            <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
       </Container>
 
       <AnimatePresence>
-        {open && (
-          <motion.nav
-            id="mobile-menu"
-            className="fixed inset-x-0 top-16 z-40 min-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-neutral-200 bg-white md:hidden dark:border-neutral-800 dark:bg-neutral-950"
-            initial={{ opacity: 0, y: -24 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -24 }}
-            transition={{ duration: 0.2 }}
-            aria-label="Mobile"
-          >
-            <Container className="flex flex-col py-2">
-              {navigation.map((item) =>
-                item.cta ? (
-                  <Button
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    size="lg"
-                    className="my-3 w-full"
-                  >
-                    {t(navKeyByHref[item.href])}
-                  </Button>
-                ) : (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="border-b border-border px-3 py-3 text-lg font-medium text-neutral-900 transition-colors hover:bg-muted dark:text-white"
-                  >
-                    {t(navKeyByHref[item.href])}
-                  </Link>
-                )
-              )}
-            </Container>
-          </motion.nav>
-        )}
+        {open ? (
+          <>
+            <motion.div
+              key="backdrop"
+              className="fixed inset-0 z-[60] bg-neutral-950/60 backdrop-blur-sm md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setOpen(false)}
+              aria-hidden="true"
+            />
+            <motion.nav
+              key="drawer"
+              id="mobile-menu"
+              dir="ltr"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Site menu"
+              className="fixed inset-y-0 right-0 z-[70] flex w-[min(20rem,88vw)] flex-col overflow-y-auto bg-white shadow-2xl md:hidden dark:border-s dark:border-neutral-800 dark:bg-neutral-950"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
+            >
+              <div className="flex h-16 shrink-0 items-center justify-between border-b border-border px-4">
+                <span className="font-display text-base font-bold text-primary">
+                  {name}
+                </span>
+                <button
+                  ref={closeButtonRef}
+                  type="button"
+                  className="flex h-11 w-11 items-center justify-center rounded-full text-neutral-700 transition-colors hover:bg-neutral-100 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                  aria-label="Close menu"
+                  onClick={() => setOpen(false)}
+                >
+                  <X className="h-6 w-6" aria-hidden="true" />
+                </button>
+              </div>
+
+              <div className="flex flex-1 flex-col overflow-y-auto py-3">
+                {navigation.map((item) => {
+                  const active = normalizedPathname === item.href;
+                  if (item.cta) return null;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "flex min-h-[48px] items-center border-s-4 px-5 text-base font-medium transition-colors",
+                        active
+                          ? "border-secondary-light bg-primary/5 font-semibold text-primary dark:bg-primary/10"
+                          : "border-transparent text-neutral-800 hover:border-secondary-light/50 hover:bg-muted dark:text-neutral-100 dark:hover:bg-neutral-900"
+                      )}
+                    >
+                      {t(navKeyByHref[item.href])}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              <div className="shrink-0 space-y-4 border-t border-border p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+                <Button
+                  href="/donate"
+                  size="lg"
+                  className="w-full"
+                  onClick={() => setOpen(false)}
+                >
+                  {t(navKeyByHref["/donate"])}
+                </Button>
+                <div className="flex items-center justify-between">
+                  <LanguageSwitcher isScrolled />
+                  <ThemeToggle isScrolled />
+                </div>
+              </div>
+            </motion.nav>
+          </>
+        ) : null}
       </AnimatePresence>
 
       <SearchModal open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />

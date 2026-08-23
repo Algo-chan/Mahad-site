@@ -44,16 +44,11 @@ export function ContactInfo() {
                   </h3>
                   <div className="mt-1 flex flex-col gap-1 text-sm">
                     <a
-                      href={`tel:${t("contact.info.phone.primary")}`}
+                      href={`tel:${String(t("contact.info.phone.primary")).replace(/\s+/g, "")}`}
                       className="font-semibold text-primary hover:underline"
+                      dir="ltr"
                     >
                       {t("contact.info.phone.primary")}
-                    </a>
-                    <a
-                      href={`tel:${t("contact.info.phone.secondary")}`}
-                      className="font-semibold text-primary hover:underline"
-                    >
-                      {t("contact.info.phone.secondary")}
                     </a>
                   </div>
                 </div>
@@ -73,18 +68,6 @@ export function ContactInfo() {
                       className="font-semibold text-primary hover:underline"
                     >
                       {t("contact.info.email.general")}
-                    </a>
-                    <a
-                      href={`mailto:${t("contact.info.email.admissions")}`}
-                      className="font-semibold text-primary hover:underline"
-                    >
-                      {t("contact.info.email.admissions")}
-                    </a>
-                    <a
-                      href={`mailto:${t("contact.info.email.donations")}`}
-                      className="font-semibold text-primary hover:underline"
-                    >
-                      {t("contact.info.email.donations")}
                     </a>
                   </div>
                 </div>

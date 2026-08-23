@@ -123,29 +123,42 @@ export function Testimonials() {
                   perView === 2 ? "grid-cols-2" : "grid-cols-1"
                 )}
               >
-                {visible.map((testimonial) => (
+                {visible.map((testimonial, offset) => (
                   <article
                     key={testimonial.id}
-                    className="flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 md:p-8"
+                    className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-950 md:p-8"
                   >
                     <span
                       aria-hidden="true"
-                      className="font-serif text-4xl leading-none text-primary"
+                      className="pointer-events-none absolute -top-6 end-4 font-display text-[7rem] leading-none text-secondary-light/25"
                     >
-                      &ldquo;
+                      &rdquo;
                     </span>
-                    <p className="mt-3 flex-1 text-lg italic leading-relaxed text-neutral-700 dark:text-neutral-300">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary-light to-accent opacity-60"
+                    />
+                    <p className="relative mt-4 flex-1 font-display text-lg italic leading-relaxed text-neutral-700 dark:text-neutral-300">
                       {testimonial.quote}
                     </p>
-                    <div className="mt-6 flex items-center gap-3">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary/20 font-bold text-secondary">
+                    <div className="relative mt-7 flex items-center gap-4 border-t border-border pt-5">
+                      <div
+                        className={cn(
+                          "flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-display text-lg font-bold ring-2",
+                          offset % 3 === 0 &&
+                            "bg-primary/10 text-primary ring-primary/20",
+                          offset % 3 === 1 &&
+                            "bg-secondary/10 text-secondary-dark dark:text-secondary-light ring-secondary/30",
+                          offset % 3 === 2 &&
+                            "bg-accent/10 text-accent-dark dark:text-accent ring-accent/25"
+                        )}
+                        aria-hidden="true"
+                      >
                         {testimonial.name.charAt(0)}
                       </div>
                       <div>
-                        <p className="font-semibold text-primary">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-sm text-neutral-500">
+                        <p className="font-semibold">{testimonial.name}</p>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400">
                           {testimonial.role}
                         </p>
                       </div>
@@ -192,11 +205,17 @@ export function Testimonials() {
                     )
                   }
                   aria-label={`Go to testimonial ${testimonial.id}`}
-                  className={cn(
-                    "h-3 w-3 rounded-full transition-colors",
-                    isActive ? "bg-primary" : "bg-neutral-300"
-                  )}
-                />
+                  aria-current={isActive ? "true" : undefined}
+                  className="flex h-11 w-6 items-center justify-center"
+                >
+                  <span
+                    className={cn(
+                      "h-3 w-3 rounded-full transition-colors",
+                      isActive ? "bg-primary" : "bg-neutral-300 dark:bg-neutral-700"
+                    )}
+                    aria-hidden="true"
+                  />
+                </button>
               );
             })}
           </div>

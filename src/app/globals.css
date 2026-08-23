@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap");
-
 @import "tailwindcss";
 
 @config "../../tailwind.config.ts";
@@ -7,59 +5,64 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
+  --font-sans: var(--font-inter), var(--font-arabic), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --background: 40 33% 98%;
+  --foreground: 25 15% 12%;
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card-foreground: 25 15% 12%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --primary: 224 64% 33%;
-  --primary-foreground: 210 40% 98%;
-  --primary-light: 217 91% 60%;
-  --primary-dark: 226 57% 21%;
-  --secondary: 161 94% 30%;
+  --popover-foreground: 25 15% 12%;
+  --primary: 162 73% 20%;
+  --primary-foreground: 0 0% 100%;
+  --primary-light: 165 60% 28%;
+  --primary-dark: 163 74% 12%;
+  --secondary: 44 64% 33%;
   --secondary-foreground: 0 0% 100%;
-  --secondary-light: 158 64% 52%;
-  --secondary-dark: 163 88% 20%;
-  --accent: 32 95% 44%;
+  --secondary-light: 45 68% 52%;
+  --secondary-dark: 41 66% 22%;
+  --accent: 20 74% 43%;
   --accent-foreground: 0 0% 100%;
-  --accent-light: 43 96% 56%;
-  --accent-dark: 23 83% 31%;
-  --cta: 11 100% 60%;
-  --cta-foreground: 0 0% 9%;
-  --cta-dark: 11 85% 48%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-  --destructive: 0 72% 51%;
+  --accent-light: 36 70% 55%;
+  --accent-dark: 16 72% 30%;
+  --cta: 20 74% 43%;
+  --cta-foreground: 0 0% 100%;
+  --cta-dark: 16 72% 30%;
+  --muted: 40 26% 94%;
+  --muted-foreground: 30 9% 38%;
+  --destructive: 0 72% 45%;
   --destructive-foreground: 0 0% 100%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 224 64% 33%;
-  --radius: 0.5rem;
-  --font-sans: "Inter", "Noto Sans Arabic", system-ui, sans-serif;
+  --border: 38 18% 88%;
+  --input: 38 18% 88%;
+  --ring: 162 73% 24%;
+  --radius: 0.75rem;
 }
 
 .dark,
 [data-theme="dark"] {
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
-  --card: 217 33% 17%;
-  --card-foreground: 210 40% 98%;
-  --popover: 217 33% 17%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 217 91% 60%;
-  --primary-foreground: 222 47% 11%;
-  --secondary: 158 64% 52%;
-  --secondary-foreground: 222 47% 11%;
-  --accent: 43 96% 56%;
-  --accent-foreground: 222 47% 11%;
-  --muted: 215 25% 27%;
-  --muted-foreground: 215 20% 65%;
-  --destructive: 0 72% 51%;
+  --background: 165 14% 7%;
+  --foreground: 40 20% 94%;
+  --card: 160 11% 11%;
+  --card-foreground: 40 20% 94%;
+  --popover: 160 11% 11%;
+  --popover-foreground: 40 20% 94%;
+  --primary: 158 48% 45%;
+  --primary-foreground: 165 30% 6%;
+  --primary-light: 160 50% 58%;
+  --primary-dark: 162 60% 22%;
+  --secondary: 45 62% 55%;
+  --secondary-foreground: 165 30% 7%;
+  --secondary-light: 46 75% 65%;
+  --secondary-dark: 40 60% 35%;
+  --accent: 22 78% 56%;
+  --accent-foreground: 20 60% 8%;
+  --muted: 160 10% 16%;
+  --muted-foreground: 38 10% 68%;
+  --destructive: 0 70% 55%;
   --destructive-foreground: 0 0% 100%;
-  --border: 215 25% 27%;
-  --input: 215 25% 27%;
-  --ring: 217 91% 60%;
+  --border: 160 9% 22%;
+  --input: 160 9% 22%;
+  --ring: 158 48% 55%;
 }
 
 @layer utilities {
@@ -82,6 +85,24 @@
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
   }
+
+  .pattern-lattice {
+    background-image: radial-gradient(
+        circle at 1px 1px,
+        rgb(255 255 255 / 0.14) 1px,
+        transparent 0
+      );
+    background-size: 22px 22px;
+  }
+
+  .pattern-lattice-emerald {
+    background-image: radial-gradient(
+        circle at 1px 1px,
+        hsl(162 73% 20% / 0.1) 1px,
+        transparent 0
+      );
+    background-size: 22px 22px;
+  }
 }
 
 @keyframes shimmer {
@@ -101,13 +122,17 @@
   }
 
   *:focus-visible {
-    outline: 2px solid hsl(var(--primary));
+    outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
 
   button:focus:not(:focus-visible),
   a:focus:not(:focus-visible) {
     outline: none;
+  }
+
+  ::selection {
+    background-color: hsl(var(--secondary-light) / 0.35);
   }
 
   html {
@@ -130,6 +155,7 @@
   h4,
   h5,
   h6 {
+    font-family: var(--font-display);
     letter-spacing: -0.02em;
     text-wrap: balance;
   }

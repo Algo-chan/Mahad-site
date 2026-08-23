@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
@@ -53,17 +54,23 @@ export function Introduction() {
           <div className="order-1 md:order-2">
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
-                <img
+                <Image
                   src="/images/school-campus.jpg"
-                  alt="Campus"
+                  alt="MAHAD Al-TOWHEED school campus in Shashemane"
+                  width={320}
+                  height={240}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 576px"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
               </div>
               <div className="absolute -bottom-6 -start-4 aspect-square w-2/3 overflow-hidden rounded-xl border-4 border-white shadow-xl dark:border-neutral-800 sm:-start-6">
-                <img
+                <Image
                   src="/images/students-learning.jpg"
-                  alt="Students"
+                  alt="Students learning together in class"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 60vw, (max-width: 1024px) 33vw, 384px"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />

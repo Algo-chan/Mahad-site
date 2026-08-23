@@ -22,9 +22,7 @@ function SocialLink({
   return (
     <a
       aria-label={label}
-      className={`flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 text-neutral-300 transition-colors hover:bg-primary hover:text-white ${
-        className ?? ""
-      }`}
+      className={`flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-neutral-200 ring-1 ring-white/15 transition-colors hover:bg-secondary-light hover:text-primary-dark ${className ?? ""}`}
       {...props}
     >
       <svg

@@ -7,7 +7,7 @@ export default function StructuredData() {
     "description": "Non-profit Islamic school in Shashemane providing academic and religious education.",
     "url": "https://mahad.fcncare.com/",
     "logo": "https://mahad.fcncare.com/logo.png",
-    "foundingDate": "2010",
+    "foundingDate": "1985",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Shashemane",
@@ -15,7 +15,7 @@ export default function StructuredData() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+251-91-600-6342",
+      "telephone": "+251916006695",
       "contactType": "admissions",
       "availableLanguage": ["English", "Arabic", "Amharic"]
     },
@@ -33,7 +33,7 @@ export default function StructuredData() {
         "name": "What is MAHAD Al-TOWHEED?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1990. We provide academic education from Kindergarten to Grade 10 and religious education from Grade 1 to Grade 12."
+          "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1985. We provide academic education from Kindergarten to Grade 10 and religious education from Grade 1 to Grade 12."
         }
       },
       {

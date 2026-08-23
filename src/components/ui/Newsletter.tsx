@@ -23,15 +23,15 @@ export function Newsletter() {
   };
 
   return (
-    <div className="rounded-2xl border border-primary/10 bg-primary/5 p-6 dark:bg-primary/10 md:p-8">
-      <h3 className="text-lg font-bold text-neutral-900 dark:text-white">
+    <div className="rounded-2xl bg-gradient-to-br from-primary to-primary-dark p-6 text-white shadow-lg ring-1 ring-white/10 md:p-8">
+      <h3 className="font-display text-xl font-bold">
         {t("newsletter.title")}
       </h3>
-      <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="mb-4 mt-1 text-sm text-white/80">
         {t("newsletter.subtitle")}
       </p>
       {subscribed ? (
-        <p className="text-sm font-medium text-green-600 dark:text-green-400">
+        <p className="text-sm font-medium text-secondary-light">
           {t("newsletter.success")}
         </p>
       ) : (
@@ -54,9 +54,9 @@ export function Newsletter() {
             placeholder={t("newsletter.placeholder")}
             aria-invalid={error ? true : undefined}
             aria-describedby={error ? "newsletter-error" : undefined}
-            className="min-h-[48px] flex-1 rounded-full border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:ring-2 focus:ring-primary dark:border-neutral-700 dark:bg-neutral-900 dark:text-white"
+            className="min-h-[48px] flex-1 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/60 focus:ring-2 focus:ring-secondary-light dark:border-white/20 dark:bg-white/10"
           />
-          <Button type="submit" variant="secondary" size="sm">
+          <Button type="submit" variant="primary" size="md">
             {t("newsletter.button")}
           </Button>
         </form>
@@ -65,7 +65,7 @@ export function Newsletter() {
         <p
           id="newsletter-error"
           role="alert"
-          className="mt-2 text-sm text-red-600 dark:text-red-400"
+          className="mt-2 text-sm text-red-200"
         >
           {error}
         </p>

@@ -34,21 +34,39 @@ export function Achievements() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-16 dark:bg-neutral-950 md:py-24">
+    <section className="py-16 md:py-24">
       <Container className="flex flex-col gap-12">
         <SectionHeader
           title={t("home.achievements.sectionTitle")}
           subtitle={t("home.achievements.sectionSubtitle")}
         />
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <FadeIn direction="up" className="h-full">
-            <div className="flex h-full flex-col rounded-3xl bg-gradient-to-br from-primary to-primary-dark p-8 text-white md:p-10">
-              <Trophy className="mb-4 h-10 w-10" aria-hidden="true" />
-              <h3 className="text-2xl font-bold md:text-3xl">
+            <div className="relative flex h-full flex-col justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-dark p-8 text-white shadow-lg md:p-10">
+              <div
+                className="pattern-lattice absolute inset-0 opacity-25"
+                aria-hidden="true"
+              />
+              <span
+                className="absolute -end-10 -top-10 h-40 w-40 rounded-full border border-secondary-light/30"
+                aria-hidden="true"
+              />
+              <span
+                className="absolute -bottom-12 -start-12 h-48 w-48 rounded-full border border-secondary-light/20"
+                aria-hidden="true"
+              />
+              <span className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-white/10 ring-1 ring-secondary-light/40">
+                <Trophy
+                  className="h-7 w-7 text-secondary-light"
+                  strokeWidth={1.75}
+                  aria-hidden="true"
+                />
+              </span>
+              <h3 className="relative font-display text-2xl font-bold md:text-3xl">
                 {t("home.achievements.featuredTitle")}
               </h3>
-              <p className="mt-3 leading-relaxed text-white/90">
+              <p className="relative mt-3 leading-relaxed text-white/85">
                 {t("home.achievements.featuredDesc")}
               </p>
             </div>
@@ -61,17 +79,17 @@ export function Achievements() {
             {achievements.map((item) => (
               <div
                 key={item.titleKey}
-                className="flex flex-col rounded-2xl border border-neutral-200 bg-neutral-50 p-6 transition-colors hover:border-secondary/50 dark:border-neutral-800 dark:bg-neutral-900"
+                className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-md"
               >
-                <item.icon
-                  className="mb-4 h-8 w-8 text-secondary"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
-                />
-                <h3 className="font-semibold text-neutral-900 dark:text-white">
-                  {t(item.titleKey)}
-                </h3>
-                <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-secondary/10 transition-colors duration-300 group-hover:bg-secondary group-hover:text-white">
+                  <item.icon
+                    className="h-[22px] w-[22px] text-secondary"
+                    strokeWidth={1.75}
+                    aria-hidden="true"
+                  />
+                </span>
+                <h3 className="font-semibold">{t(item.titleKey)}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
                   {t(item.textKey)}
                 </p>
               </div>

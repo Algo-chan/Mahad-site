@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: {
     absolute: "MAHAD Al-TOWHEED | Islamic School Shashemane Ethiopia | Donate & Enroll",
   },
-  description: "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane , bulchana, Ethiopia. We offer academic programs (KG–Grade 10) and religious education (Grade 1–12) to 500+ students. Donate or enroll today.",
+  description: "MAHAD Al-TOWHEED is a non-profit Islamic school in Bulchana, Shashemane, West Arsi Zone, Oromia, Ethiopia. We offer academic programs (KG–Grade 10) and religious education (Grade 1–12) to 1000+ students. Donate or enroll today.",
 };
 
 export default function HomePage() {

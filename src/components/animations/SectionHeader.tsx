@@ -31,10 +31,11 @@ export function SectionHeader({
         </p>
       ) : null}
       {align === "center" ? (
-        <span
-          className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent"
-          aria-hidden="true"
-        />
+        <span className="mt-5 flex items-center gap-3" aria-hidden="true">
+          <span className="h-px w-8 bg-gradient-to-r from-transparent to-secondary-light" />
+          <span className="h-2 w-2 rotate-45 bg-secondary-light" />
+          <span className="h-px w-8 bg-gradient-to-l from-transparent to-secondary-light" />
+        </span>
       ) : null}
     </FadeIn>
   );

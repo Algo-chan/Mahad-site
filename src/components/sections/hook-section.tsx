@@ -1,20 +1,21 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 export function HookSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-12 dark:bg-neutral-950 md:py-16">
-      <div className="mx-auto max-w-4xl px-4 text-center">
-        <h2 className="mb-4 text-xl font-bold text-neutral-900 dark:text-white md:text-2xl">
+    <section className="py-14 md:py-16">
+      <FadeIn className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <h2 className="mb-5 font-display text-2xl font-bold text-primary md:text-3xl">
           {t("home.hook.title")}
         </h2>
-        <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-300 md:text-lg">
+        <p className="text-base leading-relaxed text-neutral-600 md:text-lg md:leading-relaxed dark:text-neutral-300">
           {t("home.hook.text")}
         </p>
-      </div>
+      </FadeIn>
     </section>
   );
 }
