@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/layout/container";
@@ -34,6 +35,14 @@ export function Footer() {
 
       <Container className="grid grid-cols-1 gap-12 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         <div className="flex flex-col gap-4">
+          <Image
+            src="/images/book-footer.png"
+            alt=""
+            aria-hidden="true"
+            width={256}
+            height={256}
+            className="h-16 w-16 object-contain md:h-20 md:w-20"
+          />
           <Link
             href="/"
             className="font-display text-xl font-bold tracking-tight text-white"
