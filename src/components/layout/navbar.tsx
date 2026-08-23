@@ -25,6 +25,15 @@ export function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const [programsOpen, setProgramsOpen] = React.useState(false);
   const closeButtonRef = React.useRef<HTMLButtonElement>(null);
+  const hamburgerButtonRef = React.useRef<HTMLButtonElement>(null);
+  const drawerRef = React.useRef<HTMLElement>(null);
+
+  const [lastPathname, setLastPathname] = React.useState(pathname);
+  if (lastPathname !== pathname) {
+    setLastPathname(pathname);
+    if (open) setOpen(false);
+    if (programsOpen) setProgramsOpen(false);
+  }
 
   React.useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -51,13 +60,36 @@ export function Navbar() {
 
   React.useEffect(() => {
     if (!open) return;
+    const hamburger = hamburgerButtonRef.current;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     closeButtonRef.current?.focus();
     return () => {
       document.body.style.overflow = previousOverflow;
+      hamburger?.focus();
     };
   }, [open]);
+
+  const handleDrawerKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key !== "Tab") return;
+    const container = drawerRef.current;
+    if (!container) return;
+    const focusable = Array.from(
+      container.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select, textarea'
+      )
+    );
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
 
   const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
   const programsActive = PROGRAM_HREFS.includes(normalizedPathname);
@@ -253,6 +285,7 @@ export function Navbar() {
             aria-label="Open menu"
             aria-expanded={open}
             aria-controls="mobile-menu"
+            ref={hamburgerButtonRef}
             onClick={() => setOpen(true)}
           >
             <Menu className="h-6 w-6" aria-hidden="true" />
@@ -276,10 +309,11 @@ export function Navbar() {
             <motion.nav
               key="drawer"
               id="mobile-menu"
-              dir="ltr"
               role="dialog"
               aria-modal="true"
               aria-label="Site menu"
+              ref={drawerRef}
+              onKeyDown={handleDrawerKeyDown}
               className="fixed inset-y-0 right-0 z-[70] flex w-[min(20rem,88vw)] flex-col overflow-y-auto bg-white shadow-2xl md:hidden dark:border-s dark:border-neutral-800 dark:bg-neutral-950"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
