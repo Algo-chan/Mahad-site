@@ -57,18 +57,20 @@ export function Footer() {
             <span className="h-1.5 w-1.5 rotate-45 bg-secondary-light" aria-hidden="true" />
             Quick Links
           </h3>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-0.5">
-            {quickLinks.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="inline-flex min-h-[44px] items-center text-sm text-neutral-300 transition-colors hover:text-white hover:underline hover:decoration-secondary-light/60 hover:underline-offset-4"
-                >
-                  {t(navKeyByHref[item.href])}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="rounded-2xl bg-white/[0.04] p-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.25)] ring-1 ring-white/10 sm:p-4">
+            <ul className="grid grid-cols-2 gap-x-6">
+              {quickLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="inline-flex min-h-[44px] items-center text-sm text-neutral-300 transition-colors hover:text-white hover:underline hover:decoration-secondary-light/60 hover:underline-offset-4"
+                  >
+                    {t(navKeyByHref[item.href])}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
 
         <div className="flex flex-col gap-4">
