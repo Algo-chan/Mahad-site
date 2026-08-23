@@ -43,6 +43,15 @@ export function Navbar() {
   }, []);
 
   React.useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const onChange = () => {
+      if (mq.matches) setOpen(false);
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
@@ -97,8 +106,9 @@ export function Navbar() {
   const [nameLine1, nameLine2] = name.split(" ");
 
   return (
-    <header
-      dir="ltr"
+    <>
+      <header
+        dir="ltr"
       className={cn(
         "fixed inset-x-0 top-0 z-50 h-16 transition-all duration-300 md:h-18",
         isScrolled
@@ -292,8 +302,9 @@ export function Navbar() {
           </button>
         </div>
       </Container>
+    </header>
 
-      <AnimatePresence>
+    <AnimatePresence>
         {open ? (
           <>
             <motion.div
@@ -370,6 +381,6 @@ export function Navbar() {
       </AnimatePresence>
 
       <SearchModal open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-    </header>
+    </>
   );
 }
