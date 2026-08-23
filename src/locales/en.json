@@ -47,7 +47,7 @@
     },
     "philosophy": {
       "title": "Our Philosophy",
-      "text": "We believe in nurturing both the intellect and the soul. Our approach combines rigorous academic standards with moral and spiritual development, ensuring every student grows into a knowledgeable, ethical, and compassionate member of society."
+      "text": "We nurture both the intellect and the soul — combining rigorous academic standards with moral and spiritual development."
     },
     "vision": {
       "title": "Our Vision",
@@ -73,7 +73,7 @@
     "overview": {
       "title": "Our Academic Journey",
       "subtitle": "From early childhood through adolescence, we guide every student toward excellence.",
-      "text": "MAHAD Al-TOWHEED offers a comprehensive academic curriculum spanning from Kindergarten through Grade 10. Our programs are designed to develop critical thinking, creativity, and a love for learning in every child."
+      "text": "A comprehensive academic curriculum from Kindergarten through Grade 10, designed to develop critical thinking, creativity, and a love for learning."
     },
     "levels": {
       "title": "Programs by Level",
@@ -82,21 +82,21 @@
         "title": "Kindergarten",
         "grades": "KG1 & KG2",
         "age": "Ages 4-6",
-        "description": "Our kindergarten program focuses on early literacy, numeracy, social skills, and creative exploration through play-based learning. We create a nurturing environment where young minds develop confidence and curiosity.",
+        "description": "Play-based learning that builds early literacy, numeracy, social skills, and confidence — a nurturing start for young minds.",
         "features": ["Phonics & Early Reading", "Basic Mathematics", "Art & Music", "Social Development", "Islamic Manners"]
       },
       "primary": {
         "title": "Primary Education",
         "grades": "Grades 1-6",
         "age": "Ages 7-12",
-        "description": "The primary program builds strong foundational skills in core subjects while fostering critical thinking and problem-solving abilities. Students engage in interactive learning, group projects, and hands-on activities.",
+        "description": "Strong foundations in core subjects, fostered through interactive learning, group projects, and hands-on activities.",
         "features": ["Mathematics & Science", "English & Arabic Language", "Social Studies", "Computer Literacy", "Physical Education"]
       },
       "intermediate": {
         "title": "Intermediate Education",
         "grades": "Grades 7-10",
         "age": "Ages 13-16",
-        "description": "Our intermediate program prepares students for higher education with advanced coursework, independent research skills, and leadership development. Students receive personalized academic counseling and career guidance.",
+        "description": "Advanced coursework, independent research skills, and personalized guidance that prepare students for higher education.",
         "features": ["Advanced Mathematics", "Physics & Chemistry", "Biology & Environmental Science", "Literature & Composition", "Leadership & Life Skills"]
       }
     },
@@ -137,7 +137,7 @@
     "overview": {
       "title": "Our Religious Program",
       "subtitle": "Comprehensive Islamic education from the first steps of faith to advanced scholarship.",
-      "text": "MAHAD Al-TOWHEED offers a dedicated religious education program spanning Grade 1 through Grade 12. Our curriculum is designed to instill deep understanding of Islamic principles, Quranic studies, and moral values that guide students throughout their lives."
+      "text": "A dedicated program from Grade 1 through Grade 12, instilling deep understanding of Islamic principles, Quranic studies, and moral values that guide students for life."
     },
     "levels": {
       "title": "Program Structure",
@@ -145,19 +145,19 @@
       "elementary": {
         "title": "Elementary Religious",
         "grades": "Grades 1-6",
-        "description": "Foundational Islamic education focusing on Quran memorization (Hifz), basic Fiqh, Islamic manners (Adab), and stories of the Prophets. Children learn through interactive lessons, songs, and visual aids.",
+        "description": "Foundational Islamic education focused on Quran memorization (Hifz), basic Fiqh, manners (Adab), and stories of the Prophets.",
         "features": ["Quran Memorization (Juz Amma)", "Islamic Manners & Ethics", "Stories of the Prophets", "Basic Fiqh & Worship", "Arabic Language for Quran"]
       },
       "middle": {
         "title": "Middle School Religious",
         "grades": "Grades 7-9",
-        "description": "Intermediate studies in Tafsir, Hadith, Islamic History, and advanced Fiqh. Students begin analytical thinking about Islamic texts and their application in modern life.",
+        "description": "Intermediate studies in Tafsir, Hadith, Islamic History, and advanced Fiqh — connecting texts to modern life.",
         "features": ["Quranic Tafsir", "Hadith Studies", "Islamic History", "Comparative Fiqh", "Aqeedah & Creed"]
       },
       "advanced": {
         "title": "Advanced Religious",
         "grades": "Grades 10-12",
-        "description": "Advanced scholarship preparation including Usul al-Fiqh, advanced Tafsir, Islamic jurisprudence, and Dawah training. Graduates are prepared for higher Islamic studies or community leadership roles.",
+        "description": "Usul al-Fiqh, advanced Tafsir, jurisprudence, and Dawah training preparing graduates for higher scholarship or community leadership.",
         "features": ["Usul al-Fiqh", "Advanced Tafsir", "Islamic Jurisprudence", "Dawah & Leadership", "Research Methodology"]
       }
     },
@@ -189,7 +189,7 @@
     "character": {
       "title": "Character Development",
       "subtitle": "Building the Muslim personality.",
-      "text": "Beyond academic knowledge, our religious program focuses on Tazkiyah (spiritual purification) and Tarbiah (holistic upbringing). Students participate in daily Dhikr, weekly mentoring sessions, and monthly community service projects that transform knowledge into action.",
+      "text": "Beyond knowledge, our program focuses on Tazkiyah (spiritual purification) and Tarbiah (holistic upbringing) through daily Dhikr, weekly mentoring, and monthly community service.",
       "quote": "Knowledge without action is like a tree without fruit.",
       "attribution": "Islamic Proverb"
     },
@@ -288,7 +288,7 @@
       },
       "aid": {
         "title": "Financial Aid & Scholarships",
-        "text": "We believe no child should be denied education due to financial hardship. Full and partial scholarships are available based on family income, academic merit, and community service. Contact our admissions office for a confidential assessment."
+        "text": "No child should be denied education due to financial hardship. Full and partial scholarships are available — contact our admissions office for a confidential assessment."
       }
     },
     "faq": {
@@ -505,7 +505,7 @@
     "heroSubtitle": "Your generosity builds futures. Every contribution creates a ripple of hope.",
     "howToDonate": {
       "title": "How to Donate",
-      "subtitle": "Use one of the official channels below, then confirm your gift by sending your receipt. Please read the verification note before transferring.",
+      "subtitle": "Use one of the official channels below, then confirm your gift by sending your receipt.",
       "transparency": "100% of donations go directly to student programs — books, meals, uniforms, and facilities.",
       "channelsTitle": "Official Donation Channels",
       "channelsSubtitle": "These are the only official ways to give. Details are being confirmed with school administration.",
@@ -539,7 +539,7 @@
       "verification": "⚠️ Please verify the account name matches exactly before transferring. MAHAD Al-TOWHEED will never ask you to send money to a personal account or change these details via email/SMS.",
       "confirm": {
         "title": "Confirm Your Donation",
-        "subtitle": "After you transfer, send us your receipt so we can confirm your gift and, on request, issue a donation receipt for your records.",
+        "subtitle": "After you transfer, send us your receipt so we can confirm your gift and issue a receipt for your records.",
         "emailLabel": "Donations Inbox",
         "emailText": "Email your transfer receipt or screenshot to:",
         "emailCta": "Send Your Receipt",
@@ -564,16 +564,16 @@
     },
     "why": {
       "title": "Why Your Support Matters",
-      "subtitle": "In a community where many families struggle to afford basic necessities, your donation is not charity—it is an investment in human potential.",
+      "subtitle": "In a community where many families struggle, your donation is not charity — it is an investment in human potential.",
       "cards": [
-        { "title": "Education Changes Everything", "desc": "A child who completes primary school is 50% less likely to live in poverty as an adult. Your donation breaks the cycle.", "icon": "GraduationCap" },
-        { "title": "No Child Left Behind", "desc": "We turn away no student due to poverty. Your support funds scholarships, meals, and uniforms for children who would otherwise be excluded.", "icon": "Heart" },
-        { "title": "Community Transformation", "desc": "Educated children become leaders who uplift their families, neighborhoods, and nation. Your impact multiplies across generations.", "icon": "Users" }
+        { "title": "Education Changes Everything", "desc": "A child who completes primary school is far less likely to live in poverty. Your donation breaks the cycle.", "icon": "GraduationCap" },
+        { "title": "No Child Left Behind", "desc": "We turn away no student due to poverty. Your support funds scholarships, meals, and uniforms.", "icon": "Heart" },
+        { "title": "Community Transformation", "desc": "Educated children become leaders who uplift their communities. Your impact multiplies across generations.", "icon": "Users" }
       ]
     },
     "usage": {
       "title": "How Every Dollar Is Used",
-      "subtitle": "We are committed to radical transparency. Here is exactly where your money goes.",
+      "subtitle": "Radical transparency — here is exactly where your money goes.",
       "items": [
         { "percent": "45%", "title": "Direct Education", "desc": "Teacher salaries, classroom supplies, books, and learning materials." },
         { "percent": "25%", "title": "Student Welfare", "desc": "Daily meals, uniforms, medical care, and transportation support." },
@@ -628,7 +628,7 @@
     "heroSubtitle": "Together, we create lasting change.",
     "intro": {
       "title": "Partnerships That Transform Lives",
-      "text": "MAHAD Al-TOWHEED is proud to collaborate with international organizations, NGOs, government bodies, and private sponsors who share our vision of accessible, quality education. These partnerships enable us to expand our reach, improve our facilities, and provide scholarships to students in need."
+      "text": "We collaborate with international organizations, NGOs, government bodies, and private sponsors who share our vision of accessible, quality education."
     },
     "categories": {
       "all": "All Partners",
@@ -734,14 +734,14 @@
   "home": {
     "hook": {
       "title": "About MAHAD Al-TOWHEED",
-      "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1985. We provide combined academic education from Kindergarten through Grade 10 and religious education from Grade 1 through Grade 12. With over 1000 students, 50 teachers, and support from international partners, our mission is to build ethical leaders through quality education and spiritual development."
+      "text": "MAHAD Al-TOWHEED is a non-profit Islamic school in Shashemane, Ethiopia, founded in 1985. We combine academic education (KG–Grade 10) with religious education (Grades 1–12) to build ethical leaders through quality education and spiritual development."
     },
     "intro": {
       "title": "Welcome to MAHAD Al-TOWHEED",
       "subtitle": "A place where academic excellence meets moral foundation.",
-      "p1": "Founded with a vision to serve our community, MAHAD Al-TOWHEED provides comprehensive education from Kindergarten through Grade 10, alongside a dedicated religious education program from Grade 1 through Grade 12.",
-      "p2": "We believe every child deserves access to quality education that nurtures both the mind and the spirit. Our dedicated teachers, modern facilities, and values-driven curriculum create an environment where students thrive.",
-      "p3": "As a non-profit institution, we rely on the generosity of donors and partners to continue our mission. Your support directly impacts the lives of children who would otherwise be left behind.",
+      "p1": "We provide academic education from Kindergarten through Grade 10 alongside a dedicated religious education program from Grade 1 through Grade 12.",
+      "p2": "Every child deserves an education that nurtures both mind and spirit. Our dedicated teachers and values-driven curriculum make that possible.",
+      "p3": "As a non-profit, we rely on the generosity of donors and partners to continue our mission. Your support changes a child's life directly.",
       "cta": "Read Our Story"
     },
     "pillars": {

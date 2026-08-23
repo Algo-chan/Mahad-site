@@ -243,13 +243,6 @@ export function Navbar() {
             <LanguageSwitcher isScrolled={isScrolled} />
           </div>
           <ThemeToggle isScrolled={isScrolled} />
-          <Button
-            href="/donate"
-            size="sm"
-            className={cn("hidden md:inline-flex", isScrolled && "shadow-md")}
-          >
-            {t("nav.donate")}
-          </Button>
           <button
             type="button"
             className={cn(
